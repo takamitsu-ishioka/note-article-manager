@@ -1,4 +1,15 @@
-❌
-⭕
-[中央計算幻想](https://note.com/kisaburo_y/n/n6de9c4aa134f)
-👉[「万人の万人に対する支配」--民主主義とは何か](https://note.com/kisaburo_y/n/n114d9c76236c)
+# SF小説『ASI (超人工知能) の作り方』
+## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (60)
+
+#AI​  
+#生成AI​  
+#ASI​  
+#人工知能​  
+#人工超知能​  
+#情報工学​  
+#SF小説​  
+#シン対話篇​  
+#LogicStudio​  
+#LLint​  
+#WorldModel​  
+#世界モデル​  
