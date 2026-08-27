@@ -40,4 +40,5 @@ BOT=(Claude|ChatGPT|Gemini)
 できる限り原文のまま。
 $(USER): と $(BOT): は小見出しサイズ。
 $(TITLE) は大見出し。
-レスポンスに表が含まれていれば、レンダーしてpngに変換、ファイル名は table1～N.png、表の場所に TODO: table1.png と記入。
+レスポンスにテーブルが含まれていれば、レンダーしてpngに変換、ファイル名は table1～N.png、表の場所に TODO: table1.png と記入。
+テーブルは引用ブロックにもコードブロックにも入れない。
