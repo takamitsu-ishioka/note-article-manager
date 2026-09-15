@@ -581,4 +581,8 @@ TODO: table4
 
 ---
 
+[「仕事」とは何か](https://zenn.dev/kisaburo_y/articles/9e2fcefa88ec91)
+
+---
+
 #データ設計 #SSoT #イベントソーシング #不変データ #1次データ #Git #マイグレーション #段差 #生成AI #ソフトウェア設計​  

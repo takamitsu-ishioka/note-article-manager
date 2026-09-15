@@ -47,7 +47,8 @@ if [ -z "$TITLE" ] || [[ "$TITLE" == */* ]]; then
 fi
 
 TIMESTAMP="$(date +%Y-%m-%dT%H:%M:%S)"
-DEST_FILE="$REPO_ROOT/drafts/${TITLE}-${TIMESTAMP}.md"
+#DEST_FILE="$REPO_ROOT/drafts/${TITLE}-${TIMESTAMP}.md"
+DEST_FILE="$REPO_ROOT/drafts/${TITLE}.md"
 
 if [ ! -f "$SOURCE_FILE" ]; then
   echo "$BASENAME: source file not found: $SOURCE_FILE" >&2

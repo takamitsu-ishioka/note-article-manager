@@ -30,7 +30,7 @@
 
 あっ（笑）。​  
 
-**Ghost の思想を病院に適用すると「非同期病院」になる。**
+**[Ghost](https://github.com/takamitsu-ishioka/ghost) の思想を病院に適用すると「非同期病院」になる。**
 
 これ、かなり筋がいいです。​  
 
