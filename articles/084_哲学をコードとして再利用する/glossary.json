@@ -1,0 +1,576 @@
+{
+  "schemaVersion": 1,
+  "source": "article.md",
+  "audience": "専門知識を前提としない高校生以上の読者",
+  "method": {
+    "tokenizer": "SudachiPy SplitMode.C",
+    "generalFrequency": "direct lookup in wordfreq Japanese frequency dictionary",
+    "threshold": 4.0,
+    "limit": 50,
+    "note": "候補抽出のみ。採否と説明文はレビューで確定する。"
+  },
+  "terms": [
+    {
+            "term": "SSoT",
+            "normalized": "ssot",
+            "description": "Single Source of Truthの略。ある情報について、唯一の正しい参照元として扱う場所。",
+      "judgment": "review",
+      "score": 10.872,
+      "generalZipfFrequency": 0.0,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "acronym",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 137,
+        "text": "系外のTransformerであり、入力側のSSoT"
+      }
+    },
+    {
+            "term": "系外SSoT",
+            "normalized": "系外ssot",
+            "description": "自分が設計・管理する範囲の外にありながら、正しい入力の参照元として扱うもの。",
+      "judgment": "review",
+      "score": 10.3,
+      "generalZipfFrequency": 0.0,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "compound_noun",
+        "sudachi_oov"
+      ],
+      "firstOccurrence": {
+        "line": 233,
+        "text": "系外SSoTの所在を特定するための情報源"
+      }
+    },
+    {
+            "term": "系外",
+            "normalized": "系外",
+            "description": "いま設計・管理している仕組みの境界より外側にあること。\n例：企業から見た政府\n例：企業から見た社員の私生活",
+      "judgment": "review",
+      "score": 8.872,
+      "generalZipfFrequency": 0.0,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 137,
+        "text": "系外のTransformerであり、入力側のSSoT"
+      }
+    },
+    {
+            "term": "不可触",
+            "normalized": "不可触",
+            "description": "変更できないという意味ではなく、別の責任で管理されているため変更対象にしないこと。",
+      "judgment": "review",
+      "score": 8.872,
+      "generalZipfFrequency": 0.0,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 197,
+        "text": "これは不可触とした。"
+      }
+    },
+    {
+            "term": "makefile",
+            "normalized": "makefile",
+            "description": "makeというツールに、実行する処理や処理同士の順序・依存関係を指定するファイル。",
+      "judgment": "review",
+      "score": 8.307,
+      "generalZipfFrequency": 1.47,
+      "articleFrequency": 4,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 169,
+        "text": "既存のmakefile。"
+      }
+    },
+    {
+            "term": "UNIX哲学",
+            "normalized": "unix哲学",
+            "description": "一つのことをうまく行う小さな道具を作り、それらを組み合わせて複雑な処理を実現する設計思想。",
+      "judgment": "review",
+      "score": 7.86,
+      "generalZipfFrequency": 3.19,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "compound_noun",
+        "acronym"
+      ],
+      "firstOccurrence": {
+        "line": 309,
+        "text": "実装はUNIX哲学。"
+      }
+    },
+    {
+            "term": "UNIX",
+            "normalized": "unix",
+            "description": "多くのOSの基礎になったオペレーティングシステムと、そこから生まれた設計文化の総称。\n例： Linux",
+      "judgment": "review",
+      "score": 7.682,
+      "generalZipfFrequency": 3.19,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "acronym",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 301,
+        "text": "設計はトップダウン、実装はUNIX"
+      }
+    },
+    {
+            "term": "grep",
+            "normalized": "grep",
+            "description": "ファイルや文章から、指定した文字列やパターンを含む箇所を検索するコマンド。",
+      "judgment": "review",
+      "score": 7.58,
+      "generalZipfFrequency": 2.02,
+      "articleFrequency": 3,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 385,
+        "text": "たとえば、覚えている特徴的な文字列をgrepする。"
+      }
+    },
+    {
+            "term": "Transformer",
+            "normalized": "transformer",
+            "description": "入力された状態を、目的の状態へ変換するもの。この記事ではAIモデルの名称ではなく、変換器という一般的な意味で使う。\n例：プログラムのコンパイラ\n例：工場\n例：出版社",
+      "judgment": "review",
+      "score": 7.45,
+      "generalZipfFrequency": 1.6,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "latin_term"
+      ],
+      "firstOccurrence": {
+        "line": 137,
+        "text": "系外のTransformerであり、入力側のSSoT"
+      }
+    },
+    {
+            "term": "AIエージェント",
+            "normalized": "aiエージェント",
+            "description": "指示に答えるだけでなく、目的に向けて調査、判断、ツール操作などを連続して進めるAI。",
+      "judgment": "review",
+      "score": 7.402,
+      "generalZipfFrequency": 3.97,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "compound_noun",
+        "acronym",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 4,
+        "text": "最近、AIエージェントと仕事をしていて、妙なことに気づいた。"
+      }
+    },
+    {
+            "term": "API",
+            "normalized": "api",
+            "description": "ある機能を、内部の仕組みを知らなくても決められた方法で呼び出せる窓口。この記事では、未来の自分が過去の記事を再利用できることの比喩でもある。",
+      "judgment": "review",
+      "score": 7.33,
+      "generalZipfFrequency": 3.77,
+      "articleFrequency": 3,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "acronym",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 577,
+        "text": "発信が自分へのAPIになる"
+      }
+    },
+    {
+            "term": "AIセッション",
+            "normalized": "aiセッション",
+            "description": "AIとの一連の対話や作業が続いているひとまとまりの期間。ジャズなどの音楽でのセッションに由来する。",
+      "judgment": "review",
+      "score": 7.04,
+      "generalZipfFrequency": 4.01,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "compound_noun",
+        "acronym"
+      ],
+      "firstOccurrence": {
+        "line": 399,
+        "text": "オフィスのAIセッションへ戻る。"
+      }
+    },
+    {
+            "term": "Gitリポジトリ",
+            "normalized": "gitリポジトリー",
+            "description": "Gitを使って、ファイルとその変更履歴をまとめて管理する保管場所。",
+      "judgment": "review",
+      "score": 6.63,
+      "generalZipfFrequency": 2.92,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "compound_noun"
+      ],
+      "firstOccurrence": {
+        "line": 381,
+        "text": "自宅に、自分の記事を管理しているGitリポジトリがある。"
+      }
+    },
+    {
+            "term": "Git管理",
+            "normalized": "git管理",
+            "description": "ファイルの変更内容と履歴をGitで記録し、過去の状態や差分を追跡できるようにすること。",
+      "judgment": "review",
+      "score": 6.63,
+      "generalZipfFrequency": 2.92,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "compound_noun"
+      ],
+      "firstOccurrence": {
+        "line": 535,
+        "text": "そして、その原理の実体は検索可能なテキストとしてGit管理されている。"
+      }
+    },
+    {
+            "term": "リポジトリ",
+            "normalized": "リポジトリー",
+            "description": "プログラムや文書などのファイルと、その変更履歴をまとめて保管する場所。ここではGitリポジトリを指す。",
+      "judgment": "review",
+      "score": 6.522,
+      "generalZipfFrequency": 2.9,
+      "articleFrequency": 5,
+      "signals": [
+        "low_general_frequency",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 32,
+        "text": "リポジトリを取得し、コマンド一発で必要な状態まで変換する。"
+      }
+    },
+    {
+            "term": "Git",
+            "normalized": "git",
+            "description": "ファイルの変更履歴を記録し、過去との比較や共同作業を可能にするバージョン管理システム。Linus Torvaldsによって開発された。",
+      "judgment": "review",
+      "score": 6.452,
+      "generalZipfFrequency": 2.92,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "latin_term",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 381,
+        "text": "自宅に、自分の記事を管理しているGitリポジトリがある。"
+      }
+    },
+    {
+            "term": "トップダウン",
+            "normalized": "トップダウン",
+            "description": "目的や全体構造を先に決め、そこから必要な部分へ順に分解していく考え方。\n対義語：ボトムアップ",
+      "judgment": "review",
+      "score": 6.42,
+      "generalZipfFrequency": 2.68,
+      "articleFrequency": 3,
+      "signals": [
+        "low_general_frequency",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 91,
+        "text": "すると実際、後のトップダウン設計で、"
+      }
+    },
+    {
+            "term": "反例",
+            "normalized": "反例",
+            "description": "ある主張や規則が常に正しいわけではないことを示す具体例。",
+      "judgment": "review",
+      "score": 6.3,
+      "generalZipfFrequency": 2.25,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency"
+      ],
+      "firstOccurrence": {
+        "line": 456,
+        "text": "- 反例を考える"
+      }
+    },
+    {
+            "term": "プロンプト",
+            "normalized": "プロンプト",
+            "description": "AIへ渡す質問、指示、前提情報などの入力。",
+      "judgment": "review",
+      "score": 6.26,
+      "generalZipfFrequency": 2.29,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency"
+      ],
+      "firstOccurrence": {
+        "line": 571,
+        "text": "AIによって重要になるのは、AIへのプロンプト技術だけではない。"
+      }
+    },
+    {
+            "term": "ライブラリ",
+            "normalized": "ライブラリー",
+            "description": "必要なときに呼び出して再利用できる部品の集まり。この記事では、過去の記事に保存した思想の集まりを指す。\n「図書館」に由来する。",
+      "judgment": "review",
+      "score": 6.102,
+      "generalZipfFrequency": 3.27,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 421,
+        "text": "noteが「思想ライブラリ」になっていた"
+      }
+    },
+    {
+            "term": "遡行",
+            "normalized": "遡行",
+            "description": "流れを通常とは逆向きにたどること。この記事では、最終目的から必要な工程をさかのぼって考えること。",
+      "judgment": "review",
+      "score": 5.97,
+      "generalZipfFrequency": 2.58,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency"
+      ],
+      "firstOccurrence": {
+        "line": 80,
+        "text": "最下流から遡行すれば、それらは自然に出現するはずです。"
+      }
+    },
+    {
+            "term": "セットアップ",
+            "normalized": "セットアップ",
+            "description": "ソフトウェアや機器を、実際に使える状態へ準備すること。",
+      "judgment": "review",
+      "score": 5.95,
+      "generalZipfFrequency": 3.1,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun"
+      ],
+      "firstOccurrence": {
+        "line": 177,
+        "text": "別リポジトリに存在する、多数の小さなセットアップスクリプト。"
+      }
+    },
+    {
+            "term": "スクリプト",
+            "normalized": "スクリプト",
+            "description": "決まった処理をコンピューターに順番に実行させるための、小規模なプログラムや命令ファイル。\n例：シェルスクリプト\n例：Pythonスクリプト",
+      "judgment": "review",
+      "score": 5.95,
+      "generalZipfFrequency": 3.1,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun"
+      ],
+      "firstOccurrence": {
+        "line": 177,
+        "text": "別リポジトリに存在する、多数の小さなセットアップスクリプト。"
+      }
+    },
+    {
+            "term": "因果グラフ",
+            "normalized": "因果グラフ",
+            "description": "何が何を引き起こすのかを、要素と矢印で表した図。\n例：風が吹く→砂ぼこりが舞う→砂ぼこりが人の目に入る→目を患う人が増える→盲人が増える→三味線を弾く人が増える→三味線の需要が増える→三味線の胴に使う猫皮の需要が増える→猫が減る→ネズミが増える→ネズミが桶をかじる→桶が壊れる→桶の需要が増える→桶屋が儲かる",
+      "judgment": "review",
+      "score": 5.782,
+      "generalZipfFrequency": 3.59,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 653,
+        "text": "これが本来の因果グラフである。"
+      }
+    },
+    {
+            "term": "ボトルネック",
+            "normalized": "ボトルネック",
+            "description": "全体の速さや成果を最も強く制限している部分。",
+      "judgment": "review",
+      "score": 5.7,
+      "generalZipfFrequency": 2.85,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency"
+      ],
+      "firstOccurrence": {
+        "line": 565,
+        "text": "すると、人間側のボトルネックも変わる。"
+      }
+    },
+    {
+            "term": "パイプライン",
+            "normalized": "パイプライン",
+            "description": "入力を複数の工程へ順番に通し、目的の出力へ変換する処理の流れ。",
+      "judgment": "review",
+      "score": 5.692,
+      "generalZipfFrequency": 3.18,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 34,
+        "text": "そこで私は、makeを使ったパイプラインを考えていた。"
+      }
+    },
+    {
+            "term": "ディレクトリ",
+            "normalized": "ディレクトリー",
+            "description": "コンピューター上でファイルや別のディレクトリを整理して入れる場所。一般にはフォルダーとも呼ぶ。",
+      "judgment": "review",
+      "score": 5.682,
+      "generalZipfFrequency": 3.19,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 245,
+        "text": "思想がディレクトリ名を決める"
+      }
+    },
+    {
+            "term": "環境変数",
+            "normalized": "環境変数",
+            "description": "プログラムの外側から、設定値や動作条件を渡すためにOSが保持する値。",
+      "judgment": "review",
+      "score": 5.63,
+      "generalZipfFrequency": 3.42,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun"
+      ],
+      "firstOccurrence": {
+        "line": 173,
+        "text": "環境変数テンプレート。"
+      }
+    },
+    {
+            "term": "テンプレート",
+            "normalized": "テンプレート",
+            "description": "同じ種類のものを作るときに繰り返し使える、ひな型。",
+      "judgment": "review",
+      "score": 5.63,
+      "generalZipfFrequency": 3.42,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun"
+      ],
+      "firstOccurrence": {
+        "line": 173,
+        "text": "環境変数テンプレート。"
+      }
+    },
+    {
+            "term": "主観的幸福",
+            "normalized": "主観的幸福",
+            "description": "外部の基準ではなく、本人が自分を幸福だと感じている状態。",
+      "judgment": "review",
+      "score": 5.592,
+      "generalZipfFrequency": 3.78,
+      "articleFrequency": 2,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun",
+        "repeated_in_article"
+      ],
+      "firstOccurrence": {
+        "line": 629,
+        "text": "主観的幸福"
+      }
+    },
+    {
+            "term": "疑似コード",
+            "normalized": "疑似コード",
+            "description": "特定のプログラミング言語の細かな規則に縛られず、処理の考え方をコード風に表したもの。",
+      "judgment": "review",
+      "score": 5.54,
+      "generalZipfFrequency": 3.51,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency",
+        "compound_noun"
+      ],
+      "firstOccurrence": {
+        "line": 311,
+        "text": "私は半分冗談で、こんな疑似コードを書いた。"
+      }
+    },
+    {
+            "term": "ブラックボックス",
+            "normalized": "ブラックボックス",
+            "description": "内部の仕組みを調べず、入力に対して必要な出力が得られることだけを利用する対象。",
+      "judgment": "review",
+      "score": 5.47,
+      "generalZipfFrequency": 3.08,
+      "articleFrequency": 1,
+      "signals": [
+        "low_general_frequency"
+      ],
+      "firstOccurrence": {
+        "line": 141,
+        "text": "ブラックボックスでよい。"
+      }
+    }
+  ]
+}
