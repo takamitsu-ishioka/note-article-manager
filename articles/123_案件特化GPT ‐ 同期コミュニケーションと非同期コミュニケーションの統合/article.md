@@ -8,8 +8,6 @@ modified: "2026-06-03 17:03:17"
 
 # 案件特化GPT ‐ 同期コミュニケーションと非同期コミュニケーションの統合
 
-![](nd4ad6719aed7_45e835238b8a4d2baacffe9ea6bcf4ab.png)
-
 **User:** y.kisaburo@gmail.com  
 **Created:** 6/3/2026 15:13:01  
 **Updated:** 6/3/2026 15:30:39  

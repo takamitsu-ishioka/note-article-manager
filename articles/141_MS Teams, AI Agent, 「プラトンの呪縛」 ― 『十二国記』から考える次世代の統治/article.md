@@ -8,8 +8,6 @@ modified: "2026-06-15 13:20:05"
 
 # MS Teams, AI Agent, 「プラトンの呪縛」 ― 『十二国記』から考える次世代の統治
 
-![](n83d2b305ed8a_71388e0652657480b79bd430406f6930.png)
-
 ## MS Teams、AI Agent、「プラトンの呪縛」 ― 『十二国記』から考える次世代の統治
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

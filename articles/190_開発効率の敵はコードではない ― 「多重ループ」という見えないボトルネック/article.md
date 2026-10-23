@@ -8,8 +8,6 @@ modified: "2026-07-16 18:33:02"
 
 # 開発効率の敵はコードではない ― 「多重ループ」という見えないボトルネック
 
-![](nba4e54670558_b31f801751007ed7799afb387a1f27b7.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (42)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

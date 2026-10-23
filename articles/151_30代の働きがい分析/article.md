@@ -8,8 +8,6 @@ modified: "2026-06-23 07:45:43"
 
 # 30代の働きがい分析
 
-![](n8d6fbd2d0d6c_377716f35eaf85b9e158ac58c5c433a4.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (5)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

@@ -8,8 +8,6 @@ modified: "2026-07-08 14:59:12"
 
 # リニア断固中止 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (31)
 
-![](n4540e984ff7e_bb16aa8b223ae40925e7e712add37862.png)
-
 ## リニア断固中止 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (31)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

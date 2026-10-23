@@ -8,8 +8,6 @@ modified: "2026-10-07 18:16:18"
 
 # なぜ我々はその「個別対応」を断るべきなのか💢​ — 「でも顧客が望んでいる」に答える想定問答集​
 
-![](ne79ff767aa3f_94e3b869d9e5754e8e0a2c0cddd85532.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

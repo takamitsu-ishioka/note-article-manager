@@ -8,8 +8,6 @@ modified: "2026-07-15 09:00:23"
 
 # 民主主義は自由主義ではない ― 国家は幸福を決めるな、制約を減らせ
 
-![](n2e92eb1acab9_79d1dee3f0ed088ca07bda7ca3741f31.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (38)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

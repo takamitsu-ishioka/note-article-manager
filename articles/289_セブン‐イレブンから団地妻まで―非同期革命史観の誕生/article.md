@@ -8,8 +8,6 @@ modified: "2026-10-13 17:39:28"
 
 # セブン‐イレブンから団地妻まで​―非同期革命史観の誕生​
 
-![](nac37e11fcde3_03cb54f43360c447cdf1fd9612aa06af.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

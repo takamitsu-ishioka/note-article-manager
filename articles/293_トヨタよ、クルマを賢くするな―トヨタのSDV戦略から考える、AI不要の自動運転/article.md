@@ -8,8 +8,6 @@ modified: "2026-10-17 07:53:56"
 
 # トヨタよ、クルマを賢くするな―トヨタのSDV戦略から考える、AI不要の自動運転
 
-![](neba1c2b48178_0768ac7b0d9d101bd0ed0628818c4049.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

@@ -8,8 +8,6 @@ modified: "2026-09-13 16:16:41"
 
 # 死ななかった変人たち ― 論理推論と迂回生産の人類史
 
-![](naf8cfcc177d1_b2e461ac8a7b78d704d7060f62ed73b3.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

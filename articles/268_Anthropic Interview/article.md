@@ -8,8 +8,6 @@ modified: "2026-10-01 12:04:16"
 
 # Anthropic Interview​
 
-![](n67f711180527_14e817483667f3a34decdc9b67486eba.png)
-
 ## AIが100万人に「なぜ？」と聞く世界​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

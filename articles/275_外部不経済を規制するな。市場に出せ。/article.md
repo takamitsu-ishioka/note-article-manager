@@ -8,8 +8,6 @@ modified: "2026-10-06 05:26:51"
 
 # 外部不経済を規制するな。市場に出せ。​
 
-![](n68fc583d9acb_01d4ec3f224b617d50c21f7256cec53b.png)
-
 ## オンデマンド司法が「泣き寝入り」を価格に変える​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

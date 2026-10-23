@@ -8,8 +8,6 @@ modified: "2026-06-11 08:25:33"
 
 # DARP — Design Principles for Complex Systems (Applied, Part 1)
 
-![](n9796ecbba30b_d09920dc5a0b2e3f3df3a72002e8ac60.png)
-
 ## DARP — Design Principles for Complex Systems (Applied, Part 1)
 
 ## Decomposing "Deploy"

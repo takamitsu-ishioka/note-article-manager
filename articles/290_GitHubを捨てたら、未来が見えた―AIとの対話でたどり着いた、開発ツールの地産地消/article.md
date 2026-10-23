@@ -8,8 +8,6 @@ modified: "2026-10-15 05:20:11"
 
 # GitHubを捨てたら、未来が見えた―AIとの対話でたどり着いた、開発ツールの地産地消
 
-![](neffbf19fd44b_777548e840d61176727ec414128c6f3c.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

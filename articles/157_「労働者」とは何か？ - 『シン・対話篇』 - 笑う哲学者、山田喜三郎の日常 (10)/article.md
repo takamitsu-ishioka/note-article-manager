@@ -8,8 +8,6 @@ modified: "2026-06-25 14:04:29"
 
 # 「労働者」とは何か？ - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (10)
 
-![](n5569bebefee8_0bb4837f63f13534dbb7282013e15d2c.png)
-
 ## 「労働者」とは何か？ - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (10)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

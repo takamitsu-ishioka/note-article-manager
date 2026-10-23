@@ -8,8 +8,6 @@ modified: "2026-06-03 19:28:55"
 
 # Much Ado About the Claude Mythos ― リーナスの法則はAI時代にも有効か
 
-![](n11f75a0b25d7_7abd9b8cac11b55f13f683c3085fcb53.png)
-
 > "Given enough eyeballs, all bugs are shallow."
 
 *Linus's Law*

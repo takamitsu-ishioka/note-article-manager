@@ -8,8 +8,6 @@ modified: "2026-06-11 08:56:50"
 
 # DARP — Design Principles for Complex Systems
 
-![](nfcabbe68d60a_72f29ca50585af008339663459d2576a.png)
-
 ## DARP — Design Principles for Complex Systems
 
 **User:** y.kisaburo@gmail.com  

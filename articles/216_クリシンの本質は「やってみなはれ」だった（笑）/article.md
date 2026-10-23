@@ -8,8 +8,6 @@ modified: "2026-08-18 07:23:54"
 
 # クリシンの本質は「やってみなはれ」だった（笑）​
 
-![](n3d2572553ee7_db44f6a82ad23b5709dd87ba0ef58652.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (63)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

@@ -8,8 +8,6 @@ modified: "2026-06-25 13:03:29"
 
 # フィジカルAI - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (9)
 
-![](n0eeb8263c54d_d027b84fa173c7678c9ba133ce9ccf91.png)
-
 ## フィジカルAI - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (9)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

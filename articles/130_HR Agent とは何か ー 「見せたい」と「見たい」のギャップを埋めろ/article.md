@@ -8,8 +8,6 @@ modified: "2026-06-08 15:40:55"
 
 # HR Agent とは何か ー 「見せたい」と「見たい」のギャップを埋めろ
 
-![](n76f6539eeeb6_f0699bb7ee077d85e9013b04d65d2a9c.png)
-
 ## HR Agent とは何か ー 「見せたい」と「見たい」のギャップを埋めろ
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

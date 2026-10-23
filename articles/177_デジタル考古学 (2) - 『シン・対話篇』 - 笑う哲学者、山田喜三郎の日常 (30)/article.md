@@ -8,8 +8,6 @@ modified: "2026-07-08 07:48:44"
 
 # デジタル考古学 (2) - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (30)
 
-![](ne2b3dd00e688_712bfa072c00fb444f5d699c5dfe04bb.png)
-
 ## デジタル考古学 (2) - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (30)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

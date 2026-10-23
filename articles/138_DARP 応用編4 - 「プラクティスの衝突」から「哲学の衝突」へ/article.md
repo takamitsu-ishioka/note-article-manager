@@ -8,8 +8,6 @@ modified: "2026-06-12 15:15:22"
 
 # DARP 応用編4 - 「プラクティスの衝突」から「哲学の衝突」へ
 
-![](n2f57f95f79e6_5bfe130a69ab9bb64c8f0a19c1339926.png)
-
 ## [DARP]([https://note.com/kisaburo_y/n/n6802066fb837?sub_rt=share_sb](https://note.com/kisaburo_y/n/n6802066fb837?sub_rt=share_sb)) 応用編4 - 「プラクティスの衝突」から「哲学の衝突」へ
 
 **User:** y.kisaburo@gmail.com  

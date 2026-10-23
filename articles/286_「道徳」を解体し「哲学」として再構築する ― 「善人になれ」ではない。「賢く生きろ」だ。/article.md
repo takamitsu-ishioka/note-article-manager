@@ -8,8 +8,6 @@ modified: "2026-10-11 06:22:05"
 
 # 「道徳」を解体し「哲学」として再構築する​ ― 「善人になれ」ではない。「賢く生きろ」だ。​
 
-![](n70622753e00c_8b902c8c0e71319e14e8294ea6f63bc5.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

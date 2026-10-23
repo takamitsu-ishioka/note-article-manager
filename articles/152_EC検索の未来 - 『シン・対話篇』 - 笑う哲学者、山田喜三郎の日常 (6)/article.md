@@ -8,8 +8,6 @@ modified: "2026-06-23 13:05:29"
 
 # EC検索の未来 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (6)
 
-![](n387d3078ca0e_221b8f11da4a624981cbc17be0e78eff.png)
-
 ## EC検索の未来 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (6)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

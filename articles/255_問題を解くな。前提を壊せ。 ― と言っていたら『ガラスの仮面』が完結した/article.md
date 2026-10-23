@@ -8,8 +8,6 @@ modified: "2026-09-23 05:48:30"
 
 # 問題を解くな。前提を壊せ。 ― と言っていたら『ガラスの仮面』が完結した​
 
-![](n4cc3c9774943_72e0bf7a0f8996e28684ee0c43ac1428.png)
-
 ## ChatGPTとの対話が林を突き抜けてショッピングモールまで飛んでいった話​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

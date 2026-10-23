@@ -8,8 +8,6 @@ modified: "2026-07-16 15:45:48"
 
 # AIは「え～!?」と言いながら全部作る（笑）
 
-![](n4c4e6ef0bf86_6f93b77249c682855f871265ae5e845c.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (41)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

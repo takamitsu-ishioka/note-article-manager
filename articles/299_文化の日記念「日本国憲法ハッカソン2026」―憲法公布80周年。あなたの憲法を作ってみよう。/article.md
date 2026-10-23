@@ -8,8 +8,6 @@ modified: "2026-10-20 16:13:28"
 
 # 文化の日記念「日本国憲法ハッカソン2026」―憲法公布80周年。あなたの憲法を作ってみよう。
 
-![](ndebebba421e8_99b1bf7f38b8171eca3cf362f8ef5219.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

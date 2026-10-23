@@ -8,8 +8,6 @@ modified: "2026-10-18 11:49:08"
 
 # AI時代の教育戦略―問題解決から問題形成へ。人材育成の難問を、人事制度の再設計で消してみた
 
-![](n44dc4a5abdc0_fbbc298c06920fbdd8a360c3d1e4aa5d.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

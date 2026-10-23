@@ -8,8 +8,6 @@ modified: "2026-08-19 09:22:26"
 
 # 「開発」とは何か - 製品開発と環境開発​
 
-![](ndd55db8f8258_7dae355d75e97f20dc4eb9ce71cb8b4e.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (64)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

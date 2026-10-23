@@ -8,8 +8,6 @@ modified: "2026-07-18 21:12:10"
 
 # AI Is a “Strength-Training Machine for the Brain”
 
-![](n4854c8b5e82d_b5b9eae6307707ee8d6011910bfe5183.png)
-
 > **Shin Dialogues — The Everyday Life of Kisaburo Yamada, the Laughing Philosopher (45)**
 
 **Kisaburo Yamada @ Hankakusai** Published: July 18, 2026, 7:05 p.m.

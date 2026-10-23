@@ -210,13 +210,26 @@ def _text(node: Node) -> list[str]:
     return out
 
 
-def html_to_markdown(html: str) -> tuple[str, list[str], set[str]]:
+TITLE_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+
+
+def html_to_markdown(html: str) -> tuple[str, str, list[str], set[str]]:
+    """Return (body, title_image, body_images, unknown_tags).
+
+    note のエクスポートには見出し画像の専用欄が無く、本文先頭の画像として入っている。
+    本文の最初のブロックが画像だけなら、それを見出し画像として本文から外す。
+    """
     builder = TreeBuilder()
     builder.feed(html)
     builder.close()
     conv = Converter()
-    body = "\n\n".join(conv.blocks(builder.root))
-    return body + "\n", conv.images, conv.unknown_tags
+    blocks = conv.blocks(builder.root)
+    title_image = ""
+    if blocks and (m := TITLE_IMAGE_RE.fullmatch(blocks[0])):
+        title_image = m.group(1)
+        blocks.pop(0)
+        conv.images.remove(title_image)
+    return "\n\n".join(blocks) + "\n", title_image, conv.images, conv.unknown_tags
 
 
 # ---------------------------------------------------------------- plan / write
@@ -277,24 +290,27 @@ def main() -> int:
     missing_images: list[str] = []
     unknown_tags: set[str] = set()
     for n, item in enumerate(items, start=1):
-        body, images, unknown = html_to_markdown(item["html"])
+        body, title_image, images, unknown = html_to_markdown(item["html"])
         unknown_tags |= unknown
-        missing_images += [f"{item['guid']}/{name}" for name in images if not (assets_dir / name).is_file()]
-        plans.append((n, item, safe_dir_name(n, item["title"]), body, images))
+        missing_images += [f"{item['guid']}/{name}" for name in [title_image, *images]
+                           if name and not (assets_dir / name).is_file()]
+        plans.append((n, item, safe_dir_name(n, item["title"]), body, title_image, images))
 
     log(f"{BASENAME}: ---- 入出力諸元 ----")
     log(f"{BASENAME}: input  xml     : {xml_files[0]}")
     log(f"{BASENAME}: input  assets  : {assets_dir}")
     log(f"{BASENAME}: output articles: {articles_dir} (新規作成, {len(plans)} 記事)")
     log(f"{BASENAME}: output index   : {index_file} ({'上書き' if index_file.exists() else '新規作成'})")
-    log(f"{BASENAME}: images         : {sum(len(p[4]) for p in plans)} (missing {len(missing_images)})")
+    log(f"{BASENAME}: title images   : {sum(1 for p in plans if p[4])} (title.png)")
+    log(f"{BASENAME}: body images    : {sum(len(p[5]) for p in plans)}")
+    log(f"{BASENAME}: missing images : {len(missing_images)}")
     log(f"{BASENAME}: unknown tags   : {sorted(unknown_tags) or 'none'}")
     for m in missing_images:
         log(f"{BASENAME}: missing image: {m}")
 
-    print("number\tpublished\tguid\timages\tdir")
-    for n, item, dir_name, _, images in plans:
-        print(f"{n}\t{item['published']}\t{item['guid']}\t{len(images)}\t{dir_name}")
+    print("number\tpublished\tguid\ttitle_image\tbody_images\tdir")
+    for n, item, dir_name, _, title_image, images in plans:
+        print(f"{n}\t{item['published']}\t{item['guid']}\t{'yes' if title_image else 'no'}\t{len(images)}\t{dir_name}")
 
     if dry_run:
         log(f"{BASENAME}: (dry-run: 何も書き込んでいません)")
@@ -316,12 +332,14 @@ def main() -> int:
         "番号は note の公開日時順。",
         "",
     ]
-    for n, item, dir_name, body, images in plans:
+    for n, item, dir_name, body, title_image, images in plans:
         progress(n, len(plans), dir_name)
         dest = articles_dir / dir_name
         dest.mkdir()
         (dest / "article.md").write_text(
             frontmatter(item) + "\n# " + item["title"] + "\n\n" + body, encoding="utf-8")
+        if title_image and (assets_dir / title_image).is_file():
+            shutil.copy2(assets_dir / title_image, dest / "title.png")
         for name in dict.fromkeys(images):
             if (assets_dir / name).is_file():
                 shutil.copy2(assets_dir / name, dest / name)

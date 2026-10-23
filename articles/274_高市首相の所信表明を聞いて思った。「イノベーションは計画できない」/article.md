@@ -8,8 +8,6 @@ modified: "2026-10-05 15:06:06"
 
 # 高市首相の所信表明を聞いて思った。「イノベーションは計画できない」​
 
-![](n8fb3e060969d_35267ebca0d1f8ec094a5e0cd4b10c35.png)
-
 ## もし生成AI誕生前のOpenAIが、日本政府に補助金を申請したら​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

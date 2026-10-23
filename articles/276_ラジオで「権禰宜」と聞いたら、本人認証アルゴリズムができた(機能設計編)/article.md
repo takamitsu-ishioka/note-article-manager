@@ -8,8 +8,6 @@ modified: "2026-10-07 06:36:35"
 
 # ラジオで「権禰宜」と聞いたら、本人認証アルゴリズムができた(機能設計編)​
 
-![](n8457524c7346_adfa1118d412f3f50518db42ffff5a32.png)
-
 ## トークンを捨てて、AIに首実検させろ​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

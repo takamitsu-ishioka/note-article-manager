@@ -8,8 +8,6 @@ modified: "2026-08-27 10:24:45"
 
 # 「1次データ」とは何か？​
 
-![](ncff5f20a70f1_7556c90cba1653ed14a8fdbf6d4b0c59.png)
-
 ## 私:​
 
 > [DB更新作業を自動化するな。DB更新作業を消せ](https://note.com/kisaburo_y/n/nd29a9bca8fb7)  

@@ -8,8 +8,6 @@ modified: "2026-10-07 16:27:29"
 
 # なぜ我々サーバーがクライアントの内部を気にするのか💢​
 
-![](n4d9815574b46_194a21ee2196395ca3ae0c1bb8530bf2.png)
-
 ## 「外部連携」というIssueから考える、責務境界と終わらない個別対応​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

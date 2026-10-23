@@ -8,8 +8,6 @@ modified: "2026-10-07 07:56:11"
 
 # 「それ、要らなくね？」 — だいたいの発明はここから始まる​
 
-![](n49d50b1291d0_51e2b3b82baa6aa84514fed4091eeab8.png)
-
 ## 水槽を消し、トークンを消し、規制を消し、計画を消し、意思を消し、法人まで消してみる​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

@@ -8,8 +8,6 @@ modified: "2026-09-05 22:04:17"
 
 # Hey Sam, I need intelligence, not another environment.​
 
-![](n211e14f4e497_a1aa769f8e3887653882bc996f36f31d.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

@@ -8,8 +8,6 @@ modified: "2026-06-23 15:45:22"
 
 # 負債を資産に変える錬金術 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (7)
 
-![](n50ae7415a1b7_b236f48be0a5ba5ec2ec0053b362be3a.png)
-
 ## 負債を資産に変える錬金術 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (7)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

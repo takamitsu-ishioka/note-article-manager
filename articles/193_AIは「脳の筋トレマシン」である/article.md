@@ -8,8 +8,6 @@ modified: "2026-07-18 19:05:13"
 
 # AIは「脳の筋トレマシン」である
 
-![](n7bf8e1ede970_423e424291fe5e8b62485e76d9e82c13.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (45)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

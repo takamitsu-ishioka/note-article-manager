@@ -8,8 +8,6 @@ modified: "2026-08-20 09:54:33"
 
 # 小学生にCとlispを教えろ！（笑）​
 
-![](n5d7278e86302_10eafa91903a61c317f85ca248415593.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (67)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

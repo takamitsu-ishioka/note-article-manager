@@ -8,8 +8,6 @@ modified: "2026-09-29 01:31:23"
 
 # 『鬼滅の刃』は自由主義の物語だった​
 
-![](n21256ee9fe3d_b5652d69c006f891c6c4c758f3d3029e.png)
-
 ## 『鬼滅の刃』は自由主義の物語だった​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

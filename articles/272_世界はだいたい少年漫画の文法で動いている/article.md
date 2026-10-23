@@ -8,8 +8,6 @@ modified: "2026-10-02 13:17:20"
 
 # 世界はだいたい少年漫画の文法で動いている​
 
-![](n43b0cda3c44a_652fa5643c69a0df9fad07c9ea679b0b.png)
-
 ## 「ここは俺に任せて先に行け！」は分散自律並列処理だった​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

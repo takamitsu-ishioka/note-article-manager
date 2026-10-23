@@ -8,8 +8,6 @@ modified: "2026-07-05 20:06:23"
 
 # 論理性のテストはAIで自動化できる - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (24)
 
-![](n27375e7b3cea_ba628eccc3814a2009c98342e290c3fc.png)
-
 ## 論理性のテストはAIで自動化できる - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (24)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

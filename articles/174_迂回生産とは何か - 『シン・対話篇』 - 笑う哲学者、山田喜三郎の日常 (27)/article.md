@@ -8,8 +8,6 @@ modified: "2026-07-07 07:50:02"
 
 # 迂回生産とは何か - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (27)
 
-![](n5ad5e3fa3a20_799b1a31b4f85c8d2d0f81b281305853.png)
-
 ## 迂回生産とは何か - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (27)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

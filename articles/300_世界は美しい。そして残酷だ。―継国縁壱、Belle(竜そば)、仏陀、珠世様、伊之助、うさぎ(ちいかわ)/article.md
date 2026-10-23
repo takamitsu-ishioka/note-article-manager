@@ -8,8 +8,6 @@ modified: "2026-10-20 16:56:38"
 
 # 世界は美しい。そして残酷だ。―継国縁壱、Belle(竜そば)、仏陀、珠世様、伊之助、うさぎ(ちいかわ)
 
-![](nd939237bdfa6_3fde520a6072ccfca1a1b4e142ed0d4d.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

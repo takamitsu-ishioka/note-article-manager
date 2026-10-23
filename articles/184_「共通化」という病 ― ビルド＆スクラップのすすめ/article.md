@@ -8,8 +8,6 @@ modified: "2026-07-13 21:14:43"
 
 # 「共通化」という病 ― ビルド＆スクラップのすすめ
 
-![](n40d5c46dcbcd_07ebfe8be914f547f8cf18bfeca3038d.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (36)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

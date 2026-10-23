@@ -8,8 +8,6 @@ modified: "2026-10-02 12:38:40"
 
 # ヒトよ！「分散自律再帰並列拳」を習得せよ！​
 
-![](ne578670f3782_67964ea202985241415ad4b1049adfaa.png)
-
 ## 物理君とAI君に「中央集権逐次承認拳」で挑んではいけない！
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

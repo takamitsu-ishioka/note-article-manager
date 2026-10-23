@@ -8,8 +8,6 @@ modified: "2026-07-17 14:45:08"
 
 # AIの回答がどんどん賢くなる人、ならない人
 
-![](n35188e1683a7_4034f0fd4e6c74c1bd3286a3cd137139.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (43)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

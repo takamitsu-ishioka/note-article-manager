@@ -2,6 +2,7 @@
 # note.com の「エクスポート」で得た zip を展開したディレクトリ(*.xml 1個 + assets/)から、
 # 公開済み記事を articles_dir/<3桁番号>_<タイトル>/article.md (frontmatter付き) と画像へ
 # 変換し、index_file を再生成する。番号は note の公開日時順。
+# 本文先頭の画像は見出し画像とみなし、本文から外して title.png として保存する。
 # articles_dir が既に存在する場合は上書きせず停止する。
 # stdout には作成予定(または作成済み)記事の一覧を TSV で出力する。
 set -euo pipefail

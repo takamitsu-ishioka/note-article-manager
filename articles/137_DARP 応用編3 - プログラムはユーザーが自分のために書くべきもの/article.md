@@ -8,8 +8,6 @@ modified: "2026-06-12 10:25:09"
 
 # DARP 応用編3 - プログラムはユーザーが自分のために書くべきもの
 
-![](nf08ce3351cbf_ad6cf2043cf4497c741d3d9ce6dd2748.png)
-
 ## DARP 応用編3 - プログラムはユーザーが自分のために書くべきもの
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

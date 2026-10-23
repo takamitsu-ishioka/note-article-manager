@@ -8,8 +8,6 @@ modified: "2026-10-21 05:35:35"
 
 # 汚職を根絶する方法を発見した（笑）―権力を受益者に返還せよ。汚職をなくすための分散システム設計論
 
-![](na8ed9288d270_535b99d0d04f3b6c9db17eae3ec628b5.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

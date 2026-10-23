@@ -8,8 +8,6 @@ modified: "2026-06-08 05:21:50"
 
 # 「プラトンの呪い」は、こうすれば解ける
 
-![](n425369c46a2f_5bf4494ea9b613138624b31bc2da079d.png)
-
 ## 「プラトンの呪い」は、こうすれば解ける
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

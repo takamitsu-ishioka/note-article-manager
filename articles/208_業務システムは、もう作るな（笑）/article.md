@@ -8,8 +8,6 @@ modified: "2026-08-05 11:39:26"
 
 # 業務システムは、もう作るな（笑）
 
-![](nf67cb6d4fc62_01d363661fac1696d91ed6f4346d1e04.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (58)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

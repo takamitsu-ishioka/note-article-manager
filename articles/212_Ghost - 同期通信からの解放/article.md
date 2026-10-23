@@ -8,8 +8,6 @@ modified: "2026-08-11 17:33:29"
 
 # Ghost - 同期通信からの解放
 
-![](n6da82043db42_82c044c805150e5b1f7906745faa05bf.png)
-
 ## 「本人に聞くな、エージェントに聞け」
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

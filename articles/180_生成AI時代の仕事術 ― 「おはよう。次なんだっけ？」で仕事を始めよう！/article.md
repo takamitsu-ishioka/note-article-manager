@@ -8,8 +8,6 @@ modified: "2026-07-10 09:23:27"
 
 # 生成AI時代の仕事術 ― 「おはよう。次なんだっけ？」で仕事を始めよう！
 
-![](n63265f9051da_55e0e51bdf7ffabb300c0a2cf0a600dc.png)
-
 ## 生成AI時代の仕事術 ― 「おはよう。次なんだっけ？」で仕事を始めよう！
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

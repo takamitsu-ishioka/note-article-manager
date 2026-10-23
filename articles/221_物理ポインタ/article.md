@@ -8,8 +8,6 @@ modified: "2026-08-22 09:05:37"
 
 # 物理ポインタ​
 
-![](n3ed4ba4187b8_ed61940bbe66ed99cd69f76825177474.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (68)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

@@ -8,8 +8,6 @@ modified: "2026-09-13 15:26:44"
 
 # 一般システム理論における一つの大前提と二つの小前提
 
-![](n214b0fefe20b_ea997c2fafab01c20f48cb07cd875766.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

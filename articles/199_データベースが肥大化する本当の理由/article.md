@@ -8,8 +8,6 @@ modified: "2026-07-27 11:05:51"
 
 # データベースが肥大化する本当の理由
 
-![](nf4abd0714da4_3064bafe770dc5161d05d78e20389935.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (50)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

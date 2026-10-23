@@ -8,8 +8,6 @@ modified: "2026-06-28 10:51:39"
 
 # 世界モデルと物理的実在 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (12)
 
-![](n9b4e707fbeaf_5cecafc3c949c1d23d83ccaf76f08e05.png)
-
 ## 世界モデルと物理的実在 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (12)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

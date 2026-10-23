@@ -8,8 +8,6 @@ modified: "2026-09-26 12:35:40"
 
 # 魂を実装する​
 
-![](n07c01f815a45_8a5d291a97ae902c70002f055d5d5b55.png)
-
 ## 計算理論によるアニミズムの再発明​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

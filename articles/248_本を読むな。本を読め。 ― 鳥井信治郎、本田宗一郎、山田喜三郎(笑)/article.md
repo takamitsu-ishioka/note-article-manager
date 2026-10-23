@@ -8,8 +8,6 @@ modified: "2026-09-15 13:03:25"
 
 # 本を読むな。本を読め。​ ― 鳥井信治郎、本田宗一郎、山田喜三郎(笑)​
 
-![](nec84eb50eafe_d0210c273169e663d60445799fed8120.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## なお、この三人に共通するのは「郎」である。思想的な関係は今から説明する。

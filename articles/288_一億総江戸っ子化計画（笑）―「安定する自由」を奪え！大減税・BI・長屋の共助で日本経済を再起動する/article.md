@@ -8,8 +8,6 @@ modified: "2026-10-13 10:56:57"
 
 # 一億総江戸っ子化計画（笑）―「安定する自由」を奪え！大減税・BI・長屋の共助で日本経済を再起動する​
 
-![](n84434c2398c3_6b7508465858231f4d6833b51ebce539.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

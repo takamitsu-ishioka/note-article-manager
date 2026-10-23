@@ -8,8 +8,6 @@ modified: "2026-09-05 13:20:38"
 
 # Linux Boot Camp
 
-![](nf8ce1dc13f54_c0b3a3b7d261a5e7af4a67bfe240dfdd.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

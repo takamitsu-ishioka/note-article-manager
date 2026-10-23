@@ -8,8 +8,6 @@ modified: "2026-09-27 09:37:58"
 
 # 役に立つウソを選べ​
 
-![](n1b3316c5cc46_f25eb69f1dec01d7cfdfc5e6d9c8ee6a.png)
-
 ## カテゴリはウソである。それでもヒトはカテゴリなしでは考えられない​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

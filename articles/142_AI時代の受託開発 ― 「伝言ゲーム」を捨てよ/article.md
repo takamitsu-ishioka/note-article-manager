@@ -8,8 +8,6 @@ modified: "2026-06-16 07:11:02"
 
 # AI時代の受託開発 ― 「伝言ゲーム」を捨てよ
 
-![](nc086eb057562_9022060e4e1f4a4e601f86d07affd649.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
 **Created:** 6/16/2026 2:00:02  
 **Updated:** 6/16/2026 5:25:33  

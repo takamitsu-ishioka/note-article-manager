@@ -8,8 +8,6 @@ modified: "2026-10-22 19:34:05"
 
 # 個人情報漏洩？騒ぎすぎ（笑）― 660万件の流出から考える、セキュリティ騒動の費用対効果と「危機感」の副作用
 
-![](n349113764115_d488c72718d36a7f4d9328341bdb42be.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

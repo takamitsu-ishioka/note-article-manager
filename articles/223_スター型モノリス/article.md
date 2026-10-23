@@ -8,8 +8,6 @@ modified: "2026-08-23 10:20:27"
 
 # スター型モノリス
 
-![](n9f09a2d5200e_e57adbe737c2ddfe05b4530854f5a6f0.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (70)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

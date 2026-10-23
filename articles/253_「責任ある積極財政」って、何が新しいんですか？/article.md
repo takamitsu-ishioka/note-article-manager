@@ -8,8 +8,6 @@ modified: "2026-09-22 07:33:25"
 
 # 「責任ある積極財政」って、何が新しいんですか？​
 
-![](n0a8ea9f3441c_c2ab679ebbec429c60720f7d413452d9.png)
-
 ## ChatGPTと話していたら「政府は未来を選ぶな」という話になった​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

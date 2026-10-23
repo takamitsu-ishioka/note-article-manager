@@ -8,8 +8,6 @@ modified: "2026-06-24 18:02:55"
 
 # COSMOS実装 - アイデアメモ
 
-![](n3334eccd8541_8966808d9150a8a44ce7e86462624dcc.png)
-
 ## COSMOS実装 - [アイデアメモ](http://xn--cckaf4l5eg.md)
 
 **User:** Anonymous  

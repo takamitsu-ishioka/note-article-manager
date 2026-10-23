@@ -8,8 +8,6 @@ modified: "2026-09-03 12:58:24"
 
 # 文明をプログラムする―ヒトをフィルターにする​
 
-![](n8617274b5e2f_6bdb78001e665c4c12a120fa0bf8c328.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

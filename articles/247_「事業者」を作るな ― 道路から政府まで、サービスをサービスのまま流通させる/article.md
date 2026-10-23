@@ -8,8 +8,6 @@ modified: "2026-09-15 07:50:24"
 
 # 「事業者」を作るな ― 道路から政府まで、サービスをサービスのまま流通させる
 
-![](na878dd792d92_ef2a9af67500c5eaf2f1d6c4d8f30f82.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

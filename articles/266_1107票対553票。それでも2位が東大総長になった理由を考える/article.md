@@ -8,8 +8,6 @@ modified: "2026-09-30 06:40:24"
 
 # 1107票対553票。それでも2位が東大総長になった理由を考える​
 
-![](nd0ac4250496a_91a12000a111680d550784a2d00de467.png)
-
 ## 東大の新総長は『プラトンの呪縛』から逃れられるか？​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

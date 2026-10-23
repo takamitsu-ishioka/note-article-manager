@@ -8,8 +8,6 @@ modified: "2026-06-07 20:22:33"
 
 # 「論理性」と「熱量」は両立する -- 「賢い」のに「熱い」若者が増えた
 
-![](n88951a359179_271b88e3c81fb36757ab5210dba1a9b0.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
 **Created:** 6/7/2026 18:00:50  
 **Updated:** 6/7/2026 18:44:08  

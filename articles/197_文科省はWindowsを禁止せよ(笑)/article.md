@@ -8,8 +8,6 @@ modified: "2026-07-25 09:58:19"
 
 # 文科省はWindowsを禁止せよ(笑)
 
-![](n310e49c9483d_051ae157a90d9b0c8d6a38050a58c787.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (48)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

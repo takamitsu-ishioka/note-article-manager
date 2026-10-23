@@ -8,8 +8,6 @@ modified: "2026-08-04 14:04:12"
 
 # AIは「部品メーカー」になれ
 
-![](ndb517be7f4a5_d06085e43faac783b30328d8bcb301e7.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (56)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

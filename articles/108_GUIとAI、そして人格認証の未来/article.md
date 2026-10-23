@@ -8,8 +8,6 @@ modified: "2026-05-26 16:17:25"
 
 # GUIとAI、そして人格認証の未来
 
-![](nbe35a79cb997_ff853cd37b2694da5ee092d9c81359d0.png)
-
 ワイ：
 
 (GUI操作の説明画面をupload)  

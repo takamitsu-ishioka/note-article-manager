@@ -8,8 +8,6 @@ modified: "2026-10-17 16:06:23"
 
 # 『鬼滅の刃』から『ちいかわ』へ​―自由主義はなぜ麻疹を経由するのか​
 
-![](n2806df5b0e1e_88b4c399257a4336854bd21673c7cf8e.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

@@ -8,8 +8,6 @@ modified: "2026-06-09 08:34:51"
 
 # DARP ー 複雑系の設計原理
 
-![](n6802066fb837_0d49bea4d3f80e056798b4a608bcb2d7.png)
-
 ## DARP ー 複雑系の設計原理
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

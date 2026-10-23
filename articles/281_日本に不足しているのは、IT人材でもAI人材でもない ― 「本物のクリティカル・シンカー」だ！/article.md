@@ -8,8 +8,6 @@ modified: "2026-10-08 07:35:06"
 
 # 日本に不足しているのは、IT人材でもAI人材でもない ― 「本物のクリティカル・シンカー」だ！​
 
-![](n5036e478911c_ccc18e1acf60f1ecbe4310c02040c093.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

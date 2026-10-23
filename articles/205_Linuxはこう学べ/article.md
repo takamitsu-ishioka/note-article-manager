@@ -8,8 +8,6 @@ modified: "2026-08-04 10:08:39"
 
 # Linuxはこう学べ​
 
-![](n3614f652edd3_3dd11b918035636c9b7c74e0253ca881.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (55)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

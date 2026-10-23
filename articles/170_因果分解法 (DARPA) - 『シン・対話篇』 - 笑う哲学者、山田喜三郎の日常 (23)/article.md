@@ -8,8 +8,6 @@ modified: "2026-07-04 09:30:01"
 
 # 因果分解法 (DARPA) - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (23)
 
-![](ne181d0f8289f_8018b93b92344e93642b7c94c59087bf.png)
-
 ## 因果分解法 (DARPA) - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (23)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

@@ -8,8 +8,6 @@ modified: "2026-10-17 04:23:18"
 
 # 『共通化という病』―バグ修正から進化論、そして神の認識レイヤー「圏」へ
 
-![](nf5ba8325862a_9779dec8440d09a92adb2ac32b454541.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

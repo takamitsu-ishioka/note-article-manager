@@ -8,8 +8,6 @@ modified: "2026-08-19 09:42:16"
 
 # SF小説『非同期病院』(笑)​
 
-![](nd4eb87050acc_2c9d735f5d7a6b1d607b62a57a293f18.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (65)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

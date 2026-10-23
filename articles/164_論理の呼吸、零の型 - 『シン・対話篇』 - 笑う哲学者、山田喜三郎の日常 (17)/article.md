@@ -8,8 +8,6 @@ modified: "2026-07-01 14:09:26"
 
 # 論理の呼吸、零の型 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (17)
 
-![](nb85f0b3f9dac_12657dae51b6e8d0a2677983b9476455.png)
-
 ## 論理の呼吸、零の型 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (17)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

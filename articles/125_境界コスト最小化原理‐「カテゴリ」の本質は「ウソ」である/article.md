@@ -8,8 +8,6 @@ modified: "2026-06-04 15:16:32"
 
 # 境界コスト最小化原理‐「カテゴリ」の本質は「ウソ」である
 
-![](n8775996dd7bd_044f9c11fcfd10396fe4ecf94c0e6a1c.png)
-
 ## 境界コスト最小化原理‐「カテゴリ」の本質は「ウソ」である
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

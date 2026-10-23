@@ -8,8 +8,6 @@ modified: "2026-08-03 17:43:06"
 
 # 安倍晴明は、日本初のIT官僚だった！？​
 
-![](ndc0f7438e23e_51f86a3fd23ccc6d8187ac40dc0c521a.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (54)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

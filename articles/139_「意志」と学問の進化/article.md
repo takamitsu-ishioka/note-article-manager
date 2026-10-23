@@ -8,8 +8,6 @@ modified: "2026-06-12 19:19:15"
 
 # 「意志」と学問の進化
 
-![](n86a57c05b270_ea8c8ab7e91f87c4ca985334f3f044da.png)
-
 ## 「意志」と学問の進化
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

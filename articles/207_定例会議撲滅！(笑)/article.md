@@ -8,8 +8,6 @@ modified: "2026-08-04 16:19:52"
 
 # 定例会議撲滅！(笑)
 
-![](n25466cda745d_10586a547fe6bc79b8a1faf5e26b2785.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (57)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

@@ -8,8 +8,6 @@ modified: "2026-08-24 10:30:11"
 
 # 汎用問題解決法​
 
-![](n0031745763f7_3bd188fc0a61162b6bc5920ee999810b.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (71)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

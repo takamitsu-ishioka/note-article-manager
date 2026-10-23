@@ -8,8 +8,6 @@ modified: "2026-09-08 16:29:58"
 
 # 🎵少～しも恐くないわ～(割り込みなんか)
 
-![](nd065c10dcf19_6c971f58770f69a6ec56be075eb79ac9.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

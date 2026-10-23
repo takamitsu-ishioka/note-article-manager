@@ -8,8 +8,6 @@ modified: "2026-09-25 07:18:47"
 
 # アインシュタインタイルとは何か？​
 
-![](n6462a2d2765b_09e61f422b0ce7f6ee741c4e4d002dc6.png)
-
 ## 「小便器から離れて用を足す自由」は要らない​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

@@ -8,8 +8,6 @@ modified: "2026-10-02 07:58:31"
 
 # 文明は、無駄な動きを減らしている​
 
-![](nd2a7695bdd47_79cbc63dd65e62f49fd75dcbaafcbe3b.png)
-
 ## 地産地消、あわよくば自産自消​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

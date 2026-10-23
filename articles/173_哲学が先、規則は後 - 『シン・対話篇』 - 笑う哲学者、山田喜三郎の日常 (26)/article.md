@@ -8,8 +8,6 @@ modified: "2026-07-06 17:53:12"
 
 # 哲学が先、規則は後 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (26)
 
-![](n82d92e77a994_4df7b35bbb423faccc77a7fa35fc9a2b.png)
-
 ## 哲学が先、規則は後 - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (26)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

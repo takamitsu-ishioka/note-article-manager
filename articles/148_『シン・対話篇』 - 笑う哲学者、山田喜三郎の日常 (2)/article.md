@@ -8,8 +8,6 @@ modified: "2026-06-18 17:29:52"
 
 # 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (2)
 
-![](n7515892ac413_b4f3ff1488ee3e5c217344f913c2bea2.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (2)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

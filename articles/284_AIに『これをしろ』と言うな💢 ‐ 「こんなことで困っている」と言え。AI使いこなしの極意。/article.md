@@ -8,8 +8,6 @@ modified: "2026-10-09 05:47:14"
 
 # AIに『これをしろ』と言うな💢 ​‐ 「こんなことで困っている」と言え。AI使いこなしの極意。​
 
-![](ncb6c1bb6747e_3e95e72dd3d55bf64a4d287d65a2033c.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

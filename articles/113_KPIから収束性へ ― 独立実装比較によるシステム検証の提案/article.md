@@ -8,8 +8,6 @@ modified: "2026-05-29 15:42:41"
 
 # KPIから収束性へ ― 独立実装比較によるシステム検証の提案
 
-![](nddf7d3ccdd18_cfafb71240977abb26f223d554467db2.png)
-
 > "Don't think. Feel."  
 > — Bruce Lee (Enter the Dragon)
 

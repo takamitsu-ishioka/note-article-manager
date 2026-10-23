@@ -8,8 +8,6 @@ modified: "2026-06-16 14:27:19"
 
 # DARP 応用編 6 - COSMOS ― World Model Explorer の時代へ
 
-![](nbdf98980bb46_97a035d25fefe11087c4539018fb51c2.png)
-
 ## [DARP]([https://note.com/kisaburo_y/n/n6802066fb837](https://note.com/kisaburo_y/n/n6802066fb837)) 応用編 6 - COSMOS ― World Model Explorer の時代へ
 
 ---

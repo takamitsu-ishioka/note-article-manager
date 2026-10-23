@@ -8,8 +8,6 @@ modified: "2026-10-08 08:21:24"
 
 # 専門用語が、私たちを馬鹿にする​ ―『不斉』を『手性』と呼んだら、哲学が現実に戻ってきた​
 
-![](n81bb46611969_c1c73d534d3cb2faa981e53871e71a95.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

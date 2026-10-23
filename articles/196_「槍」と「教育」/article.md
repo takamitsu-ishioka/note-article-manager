@@ -8,8 +8,6 @@ modified: "2026-07-22 17:06:37"
 
 # 「槍」と「教育」
 
-![](n24be68e3ce4c_d3c9d452880f72a532156688197e581c.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (47)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

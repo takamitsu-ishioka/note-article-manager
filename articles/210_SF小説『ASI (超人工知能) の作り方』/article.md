@@ -8,8 +8,6 @@ modified: "2026-08-06 16:17:37"
 
 # SF小説『ASI (超人工知能) の作り方』
 
-![](nc2b41349dfda_0dd6e0d4594e5cbced1315d9009579b6.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (60)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

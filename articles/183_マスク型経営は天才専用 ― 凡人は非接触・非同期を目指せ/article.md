@@ -8,8 +8,6 @@ modified: "2026-07-13 12:57:07"
 
 # マスク型経営は天才専用 ― 凡人は非接触・非同期を目指せ
 
-![](nb06226afbbf9_e3f5307b6b1b2cb961c25b05df0a7fa8.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (35)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

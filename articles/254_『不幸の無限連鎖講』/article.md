@@ -8,8 +8,6 @@ modified: "2026-09-22 12:47:25"
 
 # 『不幸の無限連鎖講』
 
-![](n9883c9d0cdcc_fd74d00592e1b1e7935683ee35ad3032.png)
-
 ## 事故渋滞から妓夫太郎と猗窩座まで​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

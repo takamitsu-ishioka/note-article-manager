@@ -8,8 +8,6 @@ modified: "2026-05-25 03:07:28"
 
 # reasoning-auditコアコンセプト−−談話論理性検査機
 
-![](ne2be0e58e89e_d523bf89cb90e33cf1cb36a2c49bebbd.png)
-
 **〜自然言語談話の構造化と論理整合性検査（Audit）の協調システム〜**
 
 ## 1. 背景と目的

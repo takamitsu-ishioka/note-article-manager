@@ -8,8 +8,6 @@ modified: "2026-10-07 14:17:46"
 
 # いますぐ始められる、コスパ最高のサイバーセキュリティー​
 
-![](n07dff8a59b9d_0fb35411ce777556f08ada49ba0d8ab3.png)
-
 ## AIを使え！常に使え！​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

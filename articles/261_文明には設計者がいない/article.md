@@ -8,8 +8,6 @@ modified: "2026-09-27 00:49:06"
 
 # 文明には設計者がいない​
 
-![](n1442d8616119_b45854776ea68e05a915741384e2a0b7.png)
-
 ## 銀河系、生態系、経済、インターネット、そしてGhost​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

@@ -8,8 +8,6 @@ modified: "2026-09-12 09:35:00"
 
 # 四方千両得​ - 改善要望書を書く人に、開発環境を渡してみる​
 
-![](n512dcc1b1600_f28e39271fcfb32ae79e1ddfaccf16c5.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

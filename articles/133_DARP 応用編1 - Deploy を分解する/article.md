@@ -8,8 +8,6 @@ modified: "2026-06-10 15:49:25"
 
 # DARP 応用編1 - Deploy を分解する
 
-![](n9f2afe0a5097_aefa608c52046c5b3afab0a967a74dd3.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
 **Created:** 6/10/2026 13:57:22  
 **Updated:** 6/10/2026 14:40:29  

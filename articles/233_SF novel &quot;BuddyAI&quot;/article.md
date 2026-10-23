@@ -8,8 +8,6 @@ modified: "2026-09-07 16:00:46"
 
 # SF novel &quot;BuddyAI&quot;
 
-![](n72d3227affa0_8dfef04fd838cb42b8666704335f76e9.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
 **Created:** 9/7/2026 13:27:18  
 **Updated:** 9/7/2026 14:35:24  

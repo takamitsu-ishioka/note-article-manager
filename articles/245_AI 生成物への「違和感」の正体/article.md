@@ -8,8 +8,6 @@ modified: "2026-09-13 16:01:08"
 
 # AI 生成物への「違和感」の正体​
 
-![](nf9c2a81c5791_e59a6baafec1f39c9483bb604263090a.png)
-
 **User:** [y.kidaburo@gmail.com](mailto:y.kidaburo@gmail.com)
 
 ## 私：​

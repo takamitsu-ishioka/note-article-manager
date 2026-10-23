@@ -8,8 +8,6 @@ modified: "2026-09-10 11:36:57"
 
 # 「ロットシルト」ってなんだっけ？​
 
-![](n8c198094c916_bfaff87342d080bb451d9c2cb7778a67.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

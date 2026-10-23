@@ -8,8 +8,6 @@ modified: "2026-10-08 13:54:31"
 
 # IDCフロンティアの障害で考える「共通化という病」​― ITエンジニアよ、進化論を学べ！🫵​
 
-![](naf1eed40121b_0f9030d1f81dc456cd28602bfe95bd76.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

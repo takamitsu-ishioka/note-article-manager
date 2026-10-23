@@ -8,8 +8,6 @@ modified: "2026-10-18 08:18:06"
 
 # 「考える」とは何か？―「考える力」の正体を、小学生にもわかる言葉で説明してみた
 
-![](n116cee0844d3_f4cb8a9aee52f0e2a28c44f6a56c8587.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

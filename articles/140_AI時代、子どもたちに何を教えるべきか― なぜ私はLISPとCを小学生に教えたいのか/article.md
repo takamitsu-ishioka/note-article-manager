@@ -8,8 +8,6 @@ modified: "2026-06-13 10:29:39"
 
 # AI時代、子どもたちに何を教えるべきか― なぜ私はLISPとCを小学生に教えたいのか
 
-![](n724ff5bc05c5_71c3abfaed181226b9f1d4023cfcbd6f.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
 **Created:** 6/13/2026 4:20:19  
 **Updated:** 6/13/2026 5:30:49  

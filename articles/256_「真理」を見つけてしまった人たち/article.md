@@ -8,8 +8,6 @@ modified: "2026-09-24 17:33:43"
 
 # 「真理」を見つけてしまった人たち​
 
-![](nad4648185691_de537b5169403f0a8c64ccd1a89e3e6b.png)
-
 ## 「ファクト」を語る前に、「事実とは何か」を考えてほしい​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

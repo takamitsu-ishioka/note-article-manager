@@ -8,8 +8,6 @@ modified: "2026-06-05 18:43:41"
 
 # 人間RAM依存システムの観察記録 ー MongoDB Atlas、dbAdminロール、そして「たぶん直った」
 
-![](n5947e73371e4_b85cf9bb438f8c514f6347bf6cad1077.png)
-
 ## ある日のディプロイの記録
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

@@ -8,8 +8,6 @@ modified: "2026-07-22 13:16:46"
 
 # 「ゴミは決められた日の朝8時に出せ」という難問を解いてみた
 
-![](nc03e93f3d5f4_87217338688ca5936d33e8bccfde9c1f.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (46)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

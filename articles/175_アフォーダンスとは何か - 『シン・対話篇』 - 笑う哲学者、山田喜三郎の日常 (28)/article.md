@@ -8,8 +8,6 @@ modified: "2026-07-07 13:29:08"
 
 # アフォーダンスとは何か - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (28)
 
-![](n7dac36a4d465_bd150fe4aa7cd16c662bb3cc041b2554.png)
-
 ## アフォーダンスとは何か - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (28)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

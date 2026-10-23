@@ -8,8 +8,6 @@ modified: "2026-07-16 08:21:40"
 
 # AIはパスワードを終わらせる ― 認証は「秘密鍵」から「本人モデル」へ (1)
 
-![](n4a833a8f0890_a5a8c34644de4798fea5991a7a8945cf.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (39)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

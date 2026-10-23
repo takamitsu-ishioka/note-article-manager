@@ -8,8 +8,6 @@ modified: "2026-10-23 05:38:44"
 
 # プログラムはユーザーが書くものである
 
-![](n665731457a51_b476591210b6d9a4a1e9a90c327a1637.png)
-
 ## プログラミングは、現代の「読み書きソロバン」である
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

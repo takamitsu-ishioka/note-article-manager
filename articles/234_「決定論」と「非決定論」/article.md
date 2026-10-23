@@ -8,8 +8,6 @@ modified: "2026-09-07 18:55:18"
 
 # 「決定論」と「非決定論」
 
-![](n4403fb31e4a5_011b6c371726b7dc978ce165c3a07007.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

@@ -8,8 +8,6 @@ modified: "2026-07-03 15:56:49"
 
 # 責任を分けるな、責務を分けろ - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (22)
 
-![](n5cf1e11cf484_b76ccbbd64bd054a928a687f61c952a9.png)
-
 ## 責任を分けるな、責務を分けろ - 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (22)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

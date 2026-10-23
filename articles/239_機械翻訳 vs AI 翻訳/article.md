@@ -8,8 +8,6 @@ modified: "2026-09-10 14:23:44"
 
 # 機械翻訳 vs AI 翻訳​
 
-![](n9facb5b9081a_787216979eb138b7f9997b5c6b80d183.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

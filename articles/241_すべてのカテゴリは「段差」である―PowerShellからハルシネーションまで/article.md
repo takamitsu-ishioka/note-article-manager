@@ -8,8 +8,6 @@ modified: "2026-09-11 12:29:57"
 
 # すべてのカテゴリは「段差」である―PowerShellからハルシネーションまで​
 
-![](n23ba2d17d05b_3c6c34582845e3e1eae453faec7eac8f.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

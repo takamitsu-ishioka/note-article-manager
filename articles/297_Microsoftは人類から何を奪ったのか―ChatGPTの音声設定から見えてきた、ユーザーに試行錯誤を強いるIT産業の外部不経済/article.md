@@ -8,8 +8,6 @@ modified: "2026-10-19 10:35:29"
 
 # Microsoftは人類から何を奪ったのか​―ChatGPTの音声設定から見えてきた、ユーザーに試行錯誤を強いるIT産業の外部不経済​
 
-![](na3ca377ffe84_254f94c630708c3892e2ead8219a2f76.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

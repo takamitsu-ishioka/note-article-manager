@@ -8,8 +8,6 @@ modified: "2026-08-12 07:26:08"
 
 # Ghost — Liberating People from Synchronous Communication
 
-![](n9a4f952523ab_9bd4e3ce405636de64d1128e5c06893d.png)
-
 ## "Do not ask the person. Ask the agent."
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

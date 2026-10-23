@@ -8,8 +8,6 @@ modified: "2026-08-16 08:22:44"
 
 # BLEACHの続きを聞いたら、ASI時代のアニメ制作会社ができた(笑)​
 
-![](n3c77c2ff2937_8a0999b405c30edd597e6de4222c3fc4.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (62)​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

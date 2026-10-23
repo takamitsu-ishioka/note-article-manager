@@ -8,8 +8,6 @@ modified: "2026-09-05 20:50:27"
 
 # AIトークン倹約の極意​
 
-![](nb131468af4ea_1f1bdeb56d87908ca1e42e865db85cbb.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
 **Created:** 9/5/2026 19:22:35  
 **Updated:** 9/5/2026 19:33:33  

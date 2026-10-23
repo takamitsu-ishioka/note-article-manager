@@ -8,8 +8,6 @@ modified: "2026-09-13 14:48:46"
 
 # 責務分界は「損して得取れ」である​ ― なぜMicrosoftもTwitterも境界を壊すのか​
 
-![](nf581fef83b38_b41091533b99270f8491325314598d95.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

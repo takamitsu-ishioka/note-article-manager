@@ -8,8 +8,6 @@ modified: "2026-10-23 13:24:27"
 
 # 人類は神のベンチャー企業だった（笑）​
 
-![](n82a240fae4e9_e76befaefce5d8e77216af94f034f58d.png)
-
 ## Foursquareの経営失敗から、機械知性、ダーウィン、自己触媒反応へ​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

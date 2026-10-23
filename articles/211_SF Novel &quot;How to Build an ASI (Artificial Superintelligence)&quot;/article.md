@@ -8,8 +8,6 @@ modified: "2026-08-06 18:44:58"
 
 # SF Novel &quot;How to Build an ASI (Artificial Superintelligence)&quot;​
 
-![](n76c5847e3676_012659172651ce7c83522172670e7638.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
 **Created:** 8/6/2026 13:14:57  
 **Updated:** 8/6/2026 15:37:59  

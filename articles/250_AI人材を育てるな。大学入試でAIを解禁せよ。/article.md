@@ -8,8 +8,6 @@ modified: "2026-09-17 06:52:22"
 
 # AI人材を育てるな。大学入試でAIを解禁せよ。​
 
-![](n6031dbd52a6a_217e47a68822fb51616df1f53e2a569d.png)
-
 ## 人類史上初めて「知力」そのものを測る試験​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

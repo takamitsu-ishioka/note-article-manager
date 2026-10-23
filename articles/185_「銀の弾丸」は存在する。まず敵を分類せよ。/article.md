@@ -8,8 +8,6 @@ modified: "2026-07-14 07:18:20"
 
 # 「銀の弾丸」は存在する。まず敵を分類せよ。
 
-![](nd9c96eaa79e7_9914dd196ffada8f60c82ba16d3d99a7.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (37)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  

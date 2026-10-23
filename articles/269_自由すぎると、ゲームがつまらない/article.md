@@ -8,8 +8,6 @@ modified: "2026-10-01 17:05:16"
 
 # 自由すぎると、ゲームがつまらない​
 
-![](nee38166612d4_af084fcc909e095e970039e71dafaf39.png)
-
 ## AIが「やりたくないこと」をなくした世界で、人間は幸福なのか​
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)

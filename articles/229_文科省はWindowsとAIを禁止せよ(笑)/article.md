@@ -8,8 +8,6 @@ modified: "2026-09-04 08:29:54"
 
 # 文科省はWindowsとAIを禁止せよ(笑)​
 
-![](n635ca837845b_428f97d9a2984bd883eab552d9f92c0c.png)
-
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)
 
 ## 私：​

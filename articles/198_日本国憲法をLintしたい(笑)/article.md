@@ -8,8 +8,6 @@ modified: "2026-07-25 17:36:48"
 
 # 日本国憲法をLintしたい(笑)
 
-![](na3c2f9b54f37_c25db919989065b27a58edab1d0d3c8b.png)
-
 ## 『シン・対話篇』 - 笑う哲学者、山田喜三郎の日常 (49)
 
 **User:** [y.kisaburo@gmail.com](mailto:y.kisaburo@gmail.com)  
