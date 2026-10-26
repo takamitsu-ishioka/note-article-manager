@@ -81,7 +81,5 @@ fi
 
 mkdir -p "$DEST_DIR/backup"
 cp "$SOURCE_FILE" "$BACKUP_FILE"
-cp "$SOURCE_FILE" "$ARTICLE_FILE"
-echo "$BASENAME: コピーしました。次は instructions_to_ai_agent.md の" \
-     "「ChatGPTセッションをnote投稿可能なmdに変換する最短手順」に従って" \
-     "replace.sh / tools/fix_note_quotes.sh をarticle.mdへ実行してください。" >&2
+python3 "$SCRIPT_DIR/prepare_note_article.py" "$BACKUP_FILE" "$ARTICLE_FILE"
+echo "$BASENAME: 原本を保存し、決定論的な整形済み原稿を作成しました: $ARTICLE_FILE" >&2

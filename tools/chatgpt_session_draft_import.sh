@@ -78,5 +78,5 @@ fi
 
 cp "$SOURCE_FILE" "$DEST_FILE"
 echo "$BASENAME: コピーしました: $DEST_FILE" >&2
-echo "$BASENAME: 次は instructions_to_ai_agent.md の「ChatGPTセッションをnote投稿可能な" \
-     "mdに変換する最短手順」に従って replace.sh / tools/fix_note_quotes.sh を実行してください。" >&2
+echo "$BASENAME: 記事化時は tools/chatgpt_session_import.sh を使うと、" \
+     "決定論的な原稿整形も自動で実行されます。" >&2
