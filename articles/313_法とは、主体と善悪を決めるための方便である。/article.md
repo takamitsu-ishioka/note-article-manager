@@ -853,22 +853,13 @@ TODO: table7.png
 
 社会の目的は、
 
-$$
-\max \sum_{i=1}^{N} H_i(t)
-$$
-
+TODO: formula1.png
 幸福の変化率は、
 
-$$
-\frac{dH_i}{dt}
-$$
-
+TODO: formula2.png
 アンケートで答えてもらう角度を $\theta_i$ とすれば、
 
-$$
-\frac{dH_i}{dt} \propto \tan\theta_i
-$$
-
+TODO: formula3.png
 というモデルを考えられます。
 
 ただし、角度は回答者の主観的な尺度なので、実際の幸福の変化率と比例する保証はありません。

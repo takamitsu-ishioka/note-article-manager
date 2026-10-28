@@ -12,6 +12,7 @@
 - `title.png`は生成しない。
 - `templates/title_image.md`を記事ディレクトリへ`title_image.md`としてコピーする。
 - 表画像は列ごとに固定した水平座標へ配置し、各列の左端を全行で揃える。表の外枠を画像の左右端に一致させ、左右に余白を残さない。
+- `$$...$$`形式の表示数式は、MathJaxでPNG化して本文へ挿入する。TeX記法をそのままnote本文へ出力しない。
 
 ## note記事(『シン・対話篇』シリーズ等)の編集手順
 
@@ -120,7 +121,7 @@
 
 ChatGPTの特定セッションをnoteへ投稿可能な記事に変換するよう依頼された場合、
 `article.md`を完成原稿として整えた後、`tools/export_note_import.py`で公式インポート用の
-MTファイルを作る。以下の順で進めること。
+WXR XMLファイルを作る。以下の順で進めること。
 
 1. **エクスポート(ユーザー作業)**: ユーザーがブラウザのChatGPTエクスポート機能/拡張で
    対象セッションをMarkdownとして書き出す。`tools/chatgpt_session_import.sh`で
@@ -184,30 +185,50 @@ MTファイルを作る。以下の順で進めること。
    および同ファイルに記載されたモチーフ・画風・キャラクター指定を反映したタイトル画像を生成する。
    画像は必ず `1280x670` ピクセルであることを確認し、異なる場合はその寸法へ変換する。
    既存の画像を無断で上書きせず、同じ記事ディレクトリの`title.png`として保存する。
-11. **インポート用パッケージを生成する**: 内容が固まったら、`article.md`をnote公式インポート用の
-   MT形式へ変換する。コピー＆ペースト用に本文を渡すのではない。
+11. **TeX数式(必要な場合のみ)**: `$$...$$`形式の表示数式は、MathJaxでPNG化して
+   `formula1.png`〜`formulaN.png`として置き、本文を`TODO: formulaN.png`へ置換する。既存の数式画像は上書きしない。
+
+   ```bash
+   python3 tools/render_tex_formulas.py '<記事ディレクトリ>/article.md'
+   ```
+
+   数式画像は表・図と同様に公開アセットへコピーする。`$...$`の短いインライン数式は、TeX記号ではなくUnicodeを使った平文へ正規化する。
+12. **HTML編集とインポート用パッケージを生成する**: `article.md`から、まずVS Codeで整形・編集するための
+   `article.html`を一度だけ生成する。`article.html`はnoteへ直接アップロードしない。HTMLを編集した後は、
+   このHTMLを再生成せず、次のWXR変換へ渡す。既存の`article.html`は上書きしない。作り直しが必要な場合のみ
+   `--force`を明示する。
+
+   ```bash
+   python3 tools/export_note_import.py '<記事ディレクトリ>' --format html \
+     --output '<記事ディレクトリ>/article.html'
+   ```
+
+   校閲完了後、同じ`article.md`をnote公式インポート用のWXR形式へ変換する。
 
    ```bash
    python3 tools/export_note_import.py '<記事ディレクトリ>' \
-     --output 'exports/note-<記事番号>.txt'
+     --format wxr \
+     --html-source '<記事ディレクトリ>/article.html' \
+     --output '<記事ディレクトリ>/note_import.xml'
    ```
 
-   このリポジトリにのみある`TODO: table1.png`、`TODO: diagram1.png`、またはMarkdownのローカル画像は、
+   このリポジトリにのみある`TODO: table1.png`、`TODO: diagram1.png`、`TODO: formula1.png`、またはMarkdownのローカル画像は、
    noteが取得可能なHTTPSの公開URLが必要である。画像を公開済みなら、記事用ディレクトリを指す
    `--asset-base-url`を必ず加える。
 
    ```bash
    python3 tools/export_note_import.py '<記事ディレクトリ>' \
+     --format wxr \
      --asset-base-url 'https://assets.example.com/note/<記事番号>' \
-     --output 'exports/note-<記事番号>.txt'
+     --output '<記事ディレクトリ>/note_import.xml'
    ```
 
    URLがない状態で画像を含む原稿を出力しようとすると、ツールは失敗する。画像を落とした不完全な
    インポートファイルを作ることはしない。`title.png`は本文画像ではなくnoteのアイキャッチとして、
-   新規記事ではインポート後にnote編集画面から設定する。出力ファイルはUTF-8、末尾にMT記事区切りの
-   `--------`を持ち、`exports/`はGit管理しない。
+   新規記事ではインポート後にnote編集画面から設定する。出力ファイルはUTF-8のWXR XMLで、
+   `note_import.xml`は記事に属する投稿成果物として記事ディレクトリに保存する。
 12. **公式インポートと公開(ユーザー作業)**: ユーザーがブラウザでnoteへログインし、
-   「自分の記事」→「インポート」→「MT形式」を選んで`.txt`をアップロードする。noteは全記事を
+   「自分の記事」→「インポート」→「WXR形式」を選んで`.xml`をアップロードする。noteは全記事を
    下書きとして追加する。完了メール（最長3日）を受け取った後、下書きで本文・画像・日時を確認し、
    ユーザー自身が公開する。インポートはキャンセルできず、実行中は次のインポートを開始できないため、
    出力前に内容を確認する。公開後は`publication.yml`の`status: published`と`url`を更新する。
