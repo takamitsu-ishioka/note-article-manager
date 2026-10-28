@@ -13,6 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 TABLE_SEPARATOR_RE = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$")
 FONT_PATH = "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
+BOLD_FONT_PATH = "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
 FONT_SIZE = 28
 CELL_PADDING_X = 22
 CELL_PADDING_Y = 16
@@ -22,6 +23,21 @@ BORDER = 2
 def cells(line: str) -> list[str]:
     parts = line.strip().strip("|").split("|")
     return [part.strip() for part in parts]
+
+
+def cell_segments(value: str) -> list[tuple[str, bool]]:
+    """Return text runs, interpreting the prepared <strong> tag as bold."""
+    segments: list[tuple[str, bool]] = []
+    position = 0
+    for match in re.finditer(r"<strong>(.*?)</strong>", value, re.DOTALL):
+        if match.start() > position:
+            segments.append((value[position:match.start()], False))
+        segments.append((match.group(1), True))
+        position = match.end()
+    if position < len(value):
+        segments.append((value[position:], False))
+    # Never print markup even if a manually edited cell contains malformed tags.
+    return [(re.sub(r"</?strong>", "", text), bold) for text, bold in segments]
 
 
 def table_blocks(lines: list[str]) -> list[tuple[int, int, list[list[str]]]]:
@@ -45,8 +61,12 @@ def table_blocks(lines: list[str]) -> list[tuple[int, int, list[list[str]]]]:
 
 def render(rows: list[list[str]], output: Path) -> None:
     font = ImageFont.truetype(FONT_PATH, FONT_SIZE)
+    bold_font = ImageFont.truetype(BOLD_FONT_PATH, FONT_SIZE)
     probe = ImageDraw.Draw(Image.new("RGB", (1, 1)))
-    column_widths = [max(probe.textbbox((0, 0), row[column], font=font)[2] for row in rows) + CELL_PADDING_X * 2 for column in range(len(rows[0]))]
+    def text_width(value: str) -> int:
+        return sum(probe.textbbox((0, 0), text, font=bold_font if bold else font)[2] for text, bold in cell_segments(value))
+
+    column_widths = [max(text_width(row[column]) for row in rows) + CELL_PADDING_X * 2 for column in range(len(rows[0]))]
     row_heights = [font.getbbox("あ")[3] - font.getbbox("あ")[1] + CELL_PADDING_Y * 2 for _ in rows]
     width = sum(column_widths) + BORDER * 2
     height = sum(row_heights) + BORDER * 2
@@ -58,7 +78,11 @@ def render(rows: list[list[str]], output: Path) -> None:
         for column, value in enumerate(row):
             fill = "#f1f3f5" if row_index == 0 else "white"
             draw.rectangle((x, y, x + column_widths[column], y + row_heights[row_index]), fill=fill, outline="#343a40", width=BORDER)
-            draw.text((x + CELL_PADDING_X, y + CELL_PADDING_Y), value, font=font, fill="#111827")
+            text_x = x + CELL_PADDING_X
+            for text, bold in cell_segments(value):
+                selected_font = bold_font if bold else font
+                draw.text((text_x, y + CELL_PADDING_Y), text, font=selected_font, fill="#111827")
+                text_x += draw.textbbox((0, 0), text, font=selected_font)[2]
             x += column_widths[column]
         y += row_heights[row_index]
     output.parent.mkdir(parents=True, exist_ok=True)

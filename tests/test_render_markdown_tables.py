@@ -24,6 +24,12 @@ class RenderMarkdownTablesTest(unittest.TestCase):
             self.assertTrue(image.is_file())
             self.assertEqual(MODULE.Image.open(image).getpixel((0, 0)), (52, 58, 64))
 
+    def test_interprets_strong_tags_as_bold_text_not_literals(self):
+        self.assertEqual(
+            MODULE.cell_segments("<strong>合計</strong>：<strong>100</strong>"),
+            [("合計", True), ("：", False), ("100", True)],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
