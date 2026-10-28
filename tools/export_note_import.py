@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a note-compatible Movable Type import file from article directories.
+"""Create a note-compatible WXR (WordPress XML) import file from article directories.
 
 The resulting file is deliberately an import *package*, not a publishing API:
 note imports every entry as a draft and the author reviews and publishes it there.
@@ -12,14 +12,19 @@ import html
 import re
 import sys
 from datetime import datetime
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import quote
+from xml.sax.saxutils import escape
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DATE_RE = re.compile(r"^\s*\d+\. (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) — \[.*?\]\(<(articles/[^>]+/article\.md)>\)$")
 TODO_IMAGE_RE = re.compile(r"^\s*TODO:\s*(.+\.(?:png|jpe?g|gif))\s*$", re.IGNORECASE)
 INLINE_RE = re.compile(r"(!?)\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+TITLE_MARKER_RE = re.compile(r"<!-- NOTE_TITLE_START -->(.*?)<!-- NOTE_TITLE_END -->", re.DOTALL)
+BODY_MARKER_RE = re.compile(r"<!-- NOTE_BODY_START -->(.*?)<!-- NOTE_BODY_END -->", re.DOTALL)
+IMAGE_SRC_RE = re.compile(r"<img\b[^>]*\bsrc\s*=\s*(['\"])(.*?)\1", re.IGNORECASE | re.DOTALL)
 
 
 def article_date(article: Path) -> datetime:
@@ -63,9 +68,13 @@ def inline_html(text: str, asset_base_url: str | None) -> str:
                     raise ValueError(f"ローカル画像 {target} には --asset-base-url が必要です。")
                 target = image_url(asset_base_url, target)
             return f'<img src="{html.escape(target, quote=True)}" alt="{html.escape(label, quote=True)}">'
-        return f'<a href="{html.escape(target, quote=True)}">{label}</a>'
+        return f'<a href="{html.escape(target, quote=True)}" target="_blank">{label}</a>'
 
     escaped = INLINE_RE.sub(replace_link, escaped)
+    # prepare_note_article.py makes Markdown emphasis explicit in article.md.
+    # Preserve only that safe, structural markup after escaping the text.
+    escaped = (escaped.replace("&lt;strong&gt;", "<strong>")
+                      .replace("&lt;/strong&gt;", "</strong>"))
     escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
     escaped = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
     escaped = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", escaped)
@@ -91,7 +100,11 @@ def markdown_to_html(markdown: str, asset_base_url: str | None) -> tuple[str, st
     def flush_paragraph() -> None:
         nonlocal paragraph
         if paragraph:
-            output.append("<p>" + "<br>".join(inline_html(x, asset_base_url) for x in paragraph) + "</p>")
+            rendered = [inline_html(line, asset_base_url) for line in paragraph]
+            output.append("<p>\n" + "\n".join(
+                f"    {line}<br>"
+                for line in rendered
+            ) + "\n</p>")
             paragraph = []
 
     def flush_list() -> None:
@@ -106,6 +119,7 @@ def markdown_to_html(markdown: str, asset_base_url: str | None) -> tuple[str, st
             output.append("<blockquote><p>" + "<br>".join(inline_html(x, asset_base_url) for x in quote_lines) + "</p></blockquote>")
             quote_lines = []
 
+    blank_lines = 0
     for raw_line in lines:
         line = raw_line.rstrip().replace("\u200b", "")
         if line.startswith("```"):
@@ -127,14 +141,23 @@ def markdown_to_html(markdown: str, asset_base_url: str | None) -> tuple[str, st
             output.append(f'<p><img src="{html.escape(image_url(asset_base_url, filename), quote=True)}" alt="{html.escape(filename, quote=True)}"></p>')
             continue
         if not line:
-            flush_paragraph(); flush_list(); flush_quote()
+            # One blank line in ChatGPT Exporter is a visual line break, not a
+            # note paragraph boundary. Use two blanks to begin a new paragraph.
+            blank_lines += 1
+            if blank_lines >= 2:
+                flush_paragraph(); flush_list(); flush_quote()
             continue
+        blank_lines = 0
         if line in {"---", "***", "___"}:
             flush_paragraph(); flush_list(); flush_quote(); output.append("<hr>"); continue
         if match := re.match(r"^(#{2,6})\s+(.+)$", line):
             flush_paragraph(); flush_list(); flush_quote()
             level = len(match.group(1))
             output.append(f"<h{level}>{inline_html(match.group(2), asset_base_url)}</h{level}>")
+            continue
+        if match := re.fullmatch(r"<blockquote>(.*)</blockquote>", line):
+            flush_paragraph(); flush_list(); flush_quote()
+            output.append("<blockquote>" + inline_html(match.group(1), asset_base_url) + "</blockquote>")
             continue
         if line.startswith("> "):
             flush_paragraph(); flush_list(); quote_lines.append(line[2:]); continue
@@ -158,56 +181,181 @@ def markdown_to_html(markdown: str, asset_base_url: str | None) -> tuple[str, st
     return title, "\n".join(output)
 
 
-def mt_entry(article: Path, date: datetime, asset_base_url: str | None) -> str:
+def cdata(value: str) -> str:
+    return "<![CDATA[" + value.replace("]]>", "]]]]><![CDATA[>") + "]]>"
+
+
+def wxr_item(article: Path, date: datetime, asset_base_url: str | None) -> str:
     markdown = article.read_text(encoding="utf-8")
     validate_local_assets(article, markdown)
     title, body = markdown_to_html(markdown, asset_base_url)
-    # A literal CDATA terminator can occur in a code sample. Split it safely.
-    body = body.replace("]]>", "]]]]><![CDATA[>")
-    # note accepts MT text as UTF-8 and requires TITLE, BODY, DATE and --------.
+    return wxr_item_from_html(article.parent.name.split("_", 1)[0], title, body, date)
+
+
+def wxr_item_from_html(article_number: str, title: str, body: str, date: datetime) -> str:
+    timestamp = date.strftime("%Y-%m-%d %H:%M:%S")
     return "\n".join((
-        "AUTHOR: note-article-manager",
-        f"TITLE: {title}",
-        f"BASENAME: article-{article.parent.name.split('_', 1)[0]}",
-        "STATUS: Publish",
-        "ALLOW COMMENTS: 0",
-        "CONVERT BREAKS: 0",
-        f"DATE: {date.strftime('%m/%d/%Y %H:%M:%S')}",
-        "-----",
-        "BODY:",
-        "<![CDATA[",
-        body,
-        "]]>",
-        "--------",
+        "  <item>",
+        f"    <title>{escape(title)}</title>",
+        "    <dc:creator><![CDATA[note-article-manager]]></dc:creator>",
+        f"    <content:encoded>{cdata(body)}</content:encoded>",
+        "    <excerpt:encoded><![CDATA[]]></excerpt:encoded>",
+        f"    <wp:post_id>{escape(article_number)}</wp:post_id>",
+        f"    <wp:post_date>{timestamp}</wp:post_date>",
+        f"    <wp:post_date_gmt>{timestamp}</wp:post_date_gmt>",
+        "    <wp:comment_status>closed</wp:comment_status>",
+        "    <wp:ping_status>closed</wp:ping_status>",
+        f"    <wp:post_name>article-{escape(article_number)}</wp:post_name>",
+        "    <wp:status>publish</wp:status>",
+        "    <wp:post_parent>0</wp:post_parent>",
+        "    <wp:menu_order>0</wp:menu_order>",
+        "    <wp:post_type>post</wp:post_type>",
+        "    <wp:post_password></wp:post_password>",
+        "    <wp:is_sticky>0</wp:is_sticky>",
+        "  </item>",
+    ))
+
+
+def wxr_document(entries: list[str]) -> str:
+    return "\n".join((
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">',
+        "<channel>",
+        "  <title>note-article-manager</title>",
+        "  <link>https://note.com/</link>",
+        "  <description>note import package</description>",
+        "  <language>ja</language>",
+        "  <wp:wxr_version>1.2</wp:wxr_version>",
+        "  <wp:base_site_url>https://note.com/</wp:base_site_url>",
+        "  <wp:base_blog_url>https://note.com/</wp:base_blog_url>",
+        *entries,
+        "</channel>",
+        "</rss>",
         "",
     ))
 
 
+def html_preview(title: str, body: str) -> str:
+    """Create a readable local review artifact; it is never imported directly."""
+    return "\n".join((
+        "<!DOCTYPE html>",
+        '<html lang="ja">',
+        "<head>",
+        '    <meta charset="utf-8">',
+        '    <meta name="viewport" content="width=device-width, initial-scale=1">',
+        f"    <title>{html.escape(title)}</title>",
+        "",
+        "    <style>",
+        "        body { background: #f7f7f5; color: #222; font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans JP', sans-serif; line-height: 1.9; margin: 0; }",
+        "        article { box-sizing: border-box; max-width: 760px; margin: 0 auto; padding: 48px 28px 96px; background: #fff; min-height: 100vh; }",
+        "        h1 { font-size: 2rem; line-height: 1.45; margin: 0 0 2.5rem; }",
+        "        h2 { font-size: 1.4rem; line-height: 1.5; margin: 3rem 0 1rem; }",
+        "        p { margin: 0 0 1.4rem; }",
+        "        blockquote { border-left: 4px solid #ddd; color: #555; margin: 1.6rem 0; padding: .2rem 1.2rem; }",
+        "        img { display: block; height: auto; margin: 1.5rem auto; max-width: 100%; }",
+        "        pre { background: #f3f4f6; overflow-x: auto; padding: 1rem; }",
+        "        code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }",
+        "        hr { border: 0; border-top: 1px solid #ddd; margin: 3rem 0; }",
+        "    </style>",
+        "</head>",
+        "<body>",
+        "",
+        "    <article>",
+        "        <!-- NOTE_TITLE_START -->",
+        f"        <h1>{html.escape(title)}</h1>",
+        "        <!-- NOTE_TITLE_END -->",
+        "",
+        "        <!-- NOTE_BODY_START -->",
+        "\n".join(f"        {line}" if line else "" for line in body.splitlines()),
+        "        <!-- NOTE_BODY_END -->",
+        "    </article>",
+        "</body>",
+        "</html>",
+        "",
+    ))
+
+
+class TextOnly(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.parts: list[str] = []
+
+    def handle_data(self, data: str) -> None:
+        self.parts.append(data)
+
+
+def plain_text(fragment: str) -> str:
+    parser = TextOnly()
+    parser.feed(fragment)
+    return "".join(parser.parts).strip()
+
+
+def editable_html_parts(path: Path) -> tuple[str, str]:
+    source = path.read_text(encoding="utf-8")
+    title_match = TITLE_MARKER_RE.search(source)
+    body_match = BODY_MARKER_RE.search(source)
+    if not title_match or not body_match:
+        raise ValueError("編集HTMLにNOTE_TITLE/NOTE_BODYマーカーがありません。生成済みHTMLを使ってください。")
+    title = plain_text(title_match.group(1))
+    body = body_match.group(1).strip()
+    if not title or not body:
+        raise ValueError("編集HTMLのタイトルまたは本文が空です。")
+    for _, src in IMAGE_SRC_RE.findall(body):
+        if not re.fullmatch(r"https?://.+\.(?:png|jpe?g|gif)(?:\?[^\s]*)?", html.unescape(src), re.IGNORECASE):
+            raise ValueError(f"本文画像は公開HTTP(S)のPNG/JPEG/GIF URLにしてください: {src}")
+    return title, body
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="note インポート用 MT ファイルを生成する")
+    parser = argparse.ArgumentParser(description="note用HTMLプレビューまたはWXR XMLを生成する")
     parser.add_argument("articles", nargs="+", type=Path, help="記事ディレクトリ、または article.md")
-    parser.add_argument("-o", "--output", required=True, type=Path, help="出力する .txt ファイル")
+    parser.add_argument("-o", "--output", required=True, type=Path, help="出力する .html または .xml ファイル")
+    parser.add_argument("--format", choices=("html", "wxr"), default="wxr", help="html はレビュー用、wxr はnoteインポート用 (既定: wxr)")
+    parser.add_argument("--html-source", type=Path, help="WYSIWYG編集後のHTMLをWXR本文として使う")
     parser.add_argument("--asset-base-url", help="table1.png 等を公開している URL のベース")
     parser.add_argument("--date", help="単一記事時の日時上書き (YYYY-MM-DD HH:MM:SS)")
+    parser.add_argument("--force", action="store_true", help="既存の article.html を上書きして初期HTMLを作り直す")
     args = parser.parse_args()
-    if args.output.suffix.lower() != ".txt":
-        parser.error("note の MT インポート用に出力ファイルは .txt にしてください。")
+    expected_suffix = ".html" if args.format == "html" else ".xml"
+    if args.output.suffix.lower() != expected_suffix:
+        parser.error(f"--format {args.format} の出力ファイルは {expected_suffix} にしてください。")
+    if args.format == "html" and len(args.articles) != 1:
+        parser.error("HTMLプレビューは単一記事だけ生成できます。")
+    if args.html_source and args.format != "wxr":
+        parser.error("--html-source は --format wxr と組み合わせてください。")
+    if args.html_source and len(args.articles) != 1:
+        parser.error("--html-source は単一記事のときだけ指定できます。")
+    if args.format == "html" and args.output.exists() and not args.force:
+        parser.error("既存の編集HTMLを保護するため上書きしません。作り直す場合だけ --force を指定してください。")
     if args.date and len(args.articles) != 1:
         parser.error("--date は単一記事のときだけ指定できます。")
     try:
         entries = []
+        preview: tuple[str, str] | None = None
         for target in args.articles:
             article = target if target.name == "article.md" else target / "article.md"
             if not article.is_file():
                 raise ValueError(f"article.md が見つかりません: {article}")
             date = datetime.strptime(args.date, "%Y-%m-%d %H:%M:%S") if args.date else article_date(article)
-            entries.append(mt_entry(article, date, args.asset_base_url))
+            if args.html_source:
+                if not args.html_source.is_file():
+                    raise ValueError(f"編集HTMLが見つかりません: {args.html_source}")
+                title, body = editable_html_parts(args.html_source)
+                entries.append(wxr_item_from_html(article.parent.name.split("_", 1)[0], title, body, date))
+            elif args.format == "html":
+                markdown = article.read_text(encoding="utf-8")
+                validate_local_assets(article, markdown)
+                preview = markdown_to_html(markdown, args.asset_base_url)
+            else:
+                entries.append(wxr_item(article, date, args.asset_base_url))
     except ValueError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text("".join(entries), encoding="utf-8", newline="\n")
-    print(f"生成しました: {args.output} ({len(entries)} 件)")
+    rendered = html_preview(*preview) if preview else wxr_document(entries)
+    args.output.write_text(rendered, encoding="utf-8", newline="\n")
+    suffix = "（HTMLプレビュー）" if args.format == "html" else f"（{len(entries)} 件）"
+    print(f"生成しました: {args.output} {suffix}")
     return 0
 
 

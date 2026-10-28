@@ -11,9 +11,23 @@ from pathlib import Path
 
 SPEAKER_HEADINGS = {"## Prompt:": "## 私：", "## Response:": "## ChatGPT:"}
 EXPORT_METADATA_RE = re.compile(r"^\*\*(?:Created|Updated|Exported):\*\*.*$")
+LINK_METADATA_RE = re.compile(r"^\*\*Link:\*\*.*$")
 SPEAKER_TIMESTAMP_RE = re.compile(
     r"^\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{2}:\d{2}(?:\s+·\s+.+)?\s*$"
 )
+BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
+ESCAPED_HASH_RE = re.compile(r"^\\#")
+ESCAPED_NUMBER_RE = re.compile(r"\\\.")
+HTML_QUOTE_RE = re.compile(r"^&gt;\s?(.*)$")
+
+
+def normalize_content_line(line: str) -> str:
+    """Make exporter escaping explicit and retain note-compatible inline HTML."""
+    if quote := HTML_QUOTE_RE.fullmatch(line):
+        line = f"<blockquote>{quote.group(1)}</blockquote>"
+    line = ESCAPED_HASH_RE.sub("#", line)
+    line = ESCAPED_NUMBER_RE.sub(".", line)
+    return BOLD_RE.sub(r"<strong>\1</strong>", line)
 
 
 def prepare(markdown: str) -> str:
@@ -22,7 +36,7 @@ def prepare(markdown: str) -> str:
     discard_next_timestamp = False
     for raw_line in markdown.splitlines():
         line = raw_line.rstrip(" \u200b")
-        if EXPORT_METADATA_RE.fullmatch(line):
+        if EXPORT_METADATA_RE.fullmatch(line) or LINK_METADATA_RE.fullmatch(line):
             continue
         if discard_next_timestamp and SPEAKER_TIMESTAMP_RE.fullmatch(line):
             discard_next_timestamp = False
@@ -33,7 +47,7 @@ def prepare(markdown: str) -> str:
             continue
         if line:
             discard_next_timestamp = False
-        result.append(line)
+        result.append(normalize_content_line(line))
     return "\n".join(result).rstrip() + "\n"
 
 

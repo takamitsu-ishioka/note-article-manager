@@ -30,12 +30,26 @@ class PrepareNoteArticleTest(unittest.TestCase):
 """
         self.assertEqual(
             MODULE.prepare(source),
-            "# 題名\n**User:** Anonymous\n\n## 私：\n\n本文\n## ChatGPT:\n\n応答\n",
+            "# 題名\n<strong>User:</strong> Anonymous\n\n## 私：\n\n本文\n## ChatGPT:\n\n応答\n",
         )
 
     def test_keeps_a_regular_date_in_body(self):
         source = "# 題名\n\n2026/10/25 7:06:54 は公開日時ではない。\n"
         self.assertIn("2026/10/25", MODULE.prepare(source))
+
+    def test_normalizes_exporter_escapes_and_removes_link_metadata(self):
+        source = """# 題名
+**Link:** [会話](https://example.com)
+
+**強調**
+\\#タグ
+## 1\\. 節
+&gt;引用 **強調**
+"""
+        self.assertEqual(
+            MODULE.prepare(source),
+            "# 題名\n\n<strong>強調</strong>\n#タグ\n## 1. 節\n<blockquote>引用 <strong>強調</strong></blockquote>\n",
+        )
 
 
 if __name__ == "__main__":
