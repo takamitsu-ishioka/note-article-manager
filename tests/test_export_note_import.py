@@ -35,6 +35,17 @@ class NoteImportExportTest(unittest.TestCase):
         self.assertIn("<p>\n    <strong>強調</strong><br>\n</p>", body)
         self.assertIn("<blockquote>引用 <strong>強調</strong></blockquote>", body)
 
+    def test_renders_a_linked_markdown_image_as_an_img_tag(self):
+        _, body = MODULE.markdown_to_html(
+            "# 題名\n\n[![写真](https://images.example/photo?id=1)](https://source.example/article)\n",
+            None,
+        )
+        self.assertIn(
+            '<img src="https://images.example/photo?id=1" alt="写真">',
+            body,
+        )
+        self.assertNotIn("source.example", body)
+
     def test_requires_public_url_for_todo_images(self):
         with self.assertRaisesRegex(ValueError, "asset-base-url"):
             MODULE.markdown_to_html("# 題名\n\nTODO: table1.png\n", None)
@@ -80,6 +91,16 @@ class NoteImportExportTest(unittest.TestCase):
         )
         self.assertIn("<p>\n    一行目。<br>\n    二行目。<br>\n</p>", body)
         self.assertIn("<p>\n    別段落。<br>\n</p>", body)
+
+    def test_merges_empty_quote_lines_into_one_blockquote(self):
+        _, body = MODULE.markdown_to_html(
+            "# 題名\n\n> <strong>8件のウェブサイトを検索しました</strong>\n>\n> \n>\n> 6s考えました\n",
+            None,
+        )
+        self.assertIn(
+            "<p>\n<blockquote>\n<strong>8件のウェブサイトを検索しました</strong>\n<br>\n<br>\n<br>\n6s考えました\n</blockquote>\n</p>",
+            body,
+        )
 
     def test_rejects_missing_todo_image(self):
         with tempfile.TemporaryDirectory() as temporary:

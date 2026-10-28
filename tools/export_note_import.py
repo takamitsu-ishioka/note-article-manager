@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATE_RE = re.compile(r"^\s*\d+\. (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) — \[.*?\]\(<(articles/[^>]+/article\.md)>\)$")
 TODO_IMAGE_RE = re.compile(r"^\s*TODO:\s*(.+\.(?:png|jpe?g|gif))\s*$", re.IGNORECASE)
 INLINE_RE = re.compile(r"(!?)\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+LINKED_IMAGE_RE = re.compile(r"\[!\[([^\]]*)\]\(([^)\s]+)\)\]\(([^)\s]+)\)")
 TITLE_MARKER_RE = re.compile(r"<!-- NOTE_TITLE_START -->(.*?)<!-- NOTE_TITLE_END -->", re.DOTALL)
 BODY_MARKER_RE = re.compile(r"<!-- NOTE_BODY_START -->(.*?)<!-- NOTE_BODY_END -->", re.DOTALL)
 IMAGE_SRC_RE = re.compile(r"<img\b[^>]*\bsrc\s*=\s*(['\"])(.*?)\1", re.IGNORECASE | re.DOTALL)
@@ -70,6 +71,13 @@ def inline_html(text: str, asset_base_url: str | None) -> str:
             return f'<img src="{html.escape(target, quote=True)}" alt="{html.escape(label, quote=True)}">'
         return f'<a href="{html.escape(target, quote=True)}" target="_blank">{label}</a>'
 
+    def replace_linked_image(match: re.Match[str]) -> str:
+        label, source, _destination = (html.unescape(value) for value in match.groups())
+        return f'<img src="{html.escape(source, quote=True)}" alt="{html.escape(label, quote=True)}">'
+
+    # A linked image is a distinct Markdown construct. Keep its image but not
+    # its outer link, and process it before a normal link to avoid broken HTML.
+    escaped = LINKED_IMAGE_RE.sub(replace_linked_image, escaped)
     escaped = INLINE_RE.sub(replace_link, escaped)
     # prepare_note_article.py makes Markdown emphasis explicit in article.md.
     # Preserve only that safe, structural markup after escaping the text.
@@ -116,7 +124,19 @@ def markdown_to_html(markdown: str, asset_base_url: str | None) -> tuple[str, st
     def flush_quote() -> None:
         nonlocal quote_lines
         if quote_lines:
-            output.append("<blockquote><p>" + "<br>".join(inline_html(x, asset_base_url) for x in quote_lines) + "</p></blockquote>")
+            rendered: list[str] = []
+            empty_count = 0
+            for quote_line in quote_lines:
+                if not quote_line.strip():
+                    empty_count += 1
+                    continue
+                if rendered:
+                    # Empty quote lines are intentional visual gaps. Adjacent
+                    # non-empty quote lines retain one ordinary line break.
+                    rendered.extend(["<br>"] * (empty_count or 1))
+                rendered.append(inline_html(quote_line, asset_base_url))
+                empty_count = 0
+            output.append("<p>\n<blockquote>\n" + "\n".join(rendered) + "\n</blockquote>\n</p>")
             quote_lines = []
 
     blank_lines = 0
@@ -159,8 +179,8 @@ def markdown_to_html(markdown: str, asset_base_url: str | None) -> tuple[str, st
             flush_paragraph(); flush_list(); flush_quote()
             output.append("<blockquote>" + inline_html(match.group(1), asset_base_url) + "</blockquote>")
             continue
-        if line.startswith("> "):
-            flush_paragraph(); flush_list(); quote_lines.append(line[2:]); continue
+        if match := re.fullmatch(r">(?: ?)(.*)", line):
+            flush_paragraph(); flush_list(); quote_lines.append(match.group(1)); continue
         if match := re.match(r"^[-*+]\s+(.+)$", line):
             flush_paragraph(); flush_quote()
             if list_kind and list_kind != "ul": flush_list()
@@ -301,8 +321,8 @@ def editable_html_parts(path: Path) -> tuple[str, str]:
     if not title or not body:
         raise ValueError("編集HTMLのタイトルまたは本文が空です。")
     for _, src in IMAGE_SRC_RE.findall(body):
-        if not re.fullmatch(r"https?://.+\.(?:png|jpe?g|gif)(?:\?[^\s]*)?", html.unescape(src), re.IGNORECASE):
-            raise ValueError(f"本文画像は公開HTTP(S)のPNG/JPEG/GIF URLにしてください: {src}")
+        if not re.fullmatch(r"https?://[^\s]+", html.unescape(src), re.IGNORECASE):
+            raise ValueError(f"本文画像は公開HTTP(S) URLにしてください: {src}")
     return title, body
 
 
