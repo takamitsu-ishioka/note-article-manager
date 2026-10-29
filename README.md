@@ -26,13 +26,23 @@ note-article-manager/
 ## noteへの投稿
 
 投稿はコピー＆ペーストではなく、note公式の「インポート」を使う。`article.md`から
-Movable Type (MT) 形式の `.txt` を生成し、noteへアップロードすると、記事は**下書き**として
-追加される。公開ボタンを押すことだけは、必ずnote上で人が判断する。
+まずMarkdownから`article.html`を一度だけ生成する。`article.html`はローカル編集用の正本であり、noteへは直接アップロードしない。VS Codeの通常エディタでHTMLを整形・編集した後、次のWXR変換に渡す。生成器は既存の`article.html`を上書きしない。
 
 ```bash
 python3 tools/export_note_import.py \
   'articles/139_認証なんか要らない。商売をしろ！（笑）' \
-  --output exports/note-139.txt
+  --format html \
+  --output 'articles/139_認証なんか要らない。商売をしろ！（笑）/article.html'
+```
+
+校閲完了後、note自身のエクスポート形式と同じWXR（WordPress XML）形式の `.xml` を生成し、noteへアップロードすると、記事は**下書き**として追加される。公開ボタンを押すことだけは、必ずnote上で人が判断する。
+
+```bash
+python3 tools/export_note_import.py \
+  'articles/139_認証なんか要らない。商売をしろ！（笑）' \
+  --format wxr \
+  --html-source 'articles/139_認証なんか要らない。商売をしろ！（笑）/article.html' \
+  --output 'articles/139_認証なんか要らない。商売をしろ！（笑）/note_import.xml'
 ```
 
 このリポジトリにしかない表・図などの `TODO: table1.png` は、noteが取得できる公開 HTTPS URL が必要である。
@@ -41,12 +51,13 @@ python3 tools/export_note_import.py \
 ```bash
 python3 tools/export_note_import.py \
   'articles/143_①神を僭称するな💢②束ねるな💢' \
+  --format wxr \
   --asset-base-url 'https://assets.example.com/note/143' \
-  --output exports/note-143.txt
+  --output 'articles/143_①神を僭称するな💢②束ねるな💢/note_import.xml'
 ```
 
-`exports/` は生成物としてGit管理しない。noteの「自分の記事」→「インポート」で **MT形式** を選び、
-生成した `.txt` をアップロードする。結果メールを待ち、下書きで本文・画像・日時を確認してから公開する。
+`note_import.xml` は記事に属する投稿成果物として記事ディレクトリに保存する。`--html-source`は、HTML本文をWXRへそのまま格納する。noteの「自分の記事」→「インポート」で **WXR形式** を選び、
+生成した `.xml` をアップロードする。結果メールを待ち、下書きで本文・画像・日時を確認してから公開する。
 インポートファイルの上限は20MB・1000記事で、同時実行はできない。タイトル画像は本文画像とは別物で、
 このリポジトリから作る新規記事ではインポート後にnoteの編集画面で設定する。
 

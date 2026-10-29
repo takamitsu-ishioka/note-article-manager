@@ -26,6 +26,10 @@ LINKED_IMAGE_RE = re.compile(r"\[!\[([^\]]*)\]\(([^)\s]+)\)\]\(([^)\s]+)\)")
 TITLE_MARKER_RE = re.compile(r"<!-- NOTE_TITLE_START -->(.*?)<!-- NOTE_TITLE_END -->", re.DOTALL)
 BODY_MARKER_RE = re.compile(r"<!-- NOTE_BODY_START -->(.*?)<!-- NOTE_BODY_END -->", re.DOTALL)
 IMAGE_SRC_RE = re.compile(r"<img\b[^>]*\bsrc\s*=\s*(['\"])(.*?)\1", re.IGNORECASE | re.DOTALL)
+DISPLAY_MATH_RE = re.compile(r"\$\$\s*\n(.*?)\n\$\$", re.DOTALL)
+INLINE_MATH_RE = re.compile(r"\$([^$\n]+)\$")
+SUBSCRIPT = str.maketrans("0123456789+-=()aehijklmnoprstuvx", "₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ")
+SUPERSCRIPT = str.maketrans("0123456789+-=()N", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ᴺ")
 
 
 def article_date(article: Path) -> datetime:
@@ -40,6 +44,33 @@ def article_date(article: Path) -> datetime:
 
 def image_url(asset_base_url: str, filename: str) -> str:
     return asset_base_url.rstrip("/") + "/" + quote(filename)
+
+
+def plain_math(value: str) -> str:
+    """Turn the small TeX subset emitted by ChatGPT Exporter into readable text."""
+    value = value.strip()
+    value = re.sub(r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"\1 / \2", value)
+    value = re.sub(
+        r"\\sum_\{([^{}]+)\}\^\{([^{}]+)\}",
+        lambda match: f"Σ（{match.group(1)}〜{match.group(2).translate(SUPERSCRIPT)}）",
+        value,
+    )
+    value = value.replace(r"\max", "max").replace(r"\propto", "∝")
+    value = value.replace(r"\tan", "tan").replace(r"\theta", "θ")
+    value = re.sub(r"_\{([^{}]+)\}", lambda match: match.group(1).translate(SUBSCRIPT), value)
+    value = re.sub(r"_([A-Za-z0-9])", lambda match: match.group(1).translate(SUBSCRIPT), value)
+    value = re.sub(r"\^\{([^{}]+)\}", lambda match: match.group(1).translate(SUPERSCRIPT), value)
+    value = re.sub(r"\^([A-Za-z0-9])", lambda match: match.group(1).translate(SUPERSCRIPT), value)
+    return re.sub(r"\\([A-Za-z]+)", r"\1", value)
+
+
+def normalize_math(markdown: str) -> str:
+    markdown = DISPLAY_MATH_RE.sub(lambda match: plain_math(match.group(1)), markdown)
+    markdown = INLINE_MATH_RE.sub(lambda match: plain_math(match.group(1)), markdown)
+    return "\n".join(
+        plain_math(line) if re.search(r"\\(?:frac|sum|max|propto|tan|theta)", line) else line
+        for line in markdown.splitlines()
+    )
 
 
 def validate_local_assets(article: Path, markdown: str) -> None:
@@ -90,7 +121,7 @@ def inline_html(text: str, asset_base_url: str | None) -> str:
 
 
 def markdown_to_html(markdown: str, asset_base_url: str | None) -> tuple[str, str]:
-    lines = markdown.splitlines()
+    lines = normalize_math(markdown).splitlines()
     title = ""
     if lines and (match := re.match(r"^#\s+(.+?)\s*$", lines[0].replace("\u200b", ""))):
         title = match.group(1)

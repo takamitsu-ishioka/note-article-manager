@@ -102,6 +102,17 @@ class NoteImportExportTest(unittest.TestCase):
             body,
         )
 
+    def test_renders_common_tex_as_plain_unicode_not_tex_delimiters(self):
+        _, body = MODULE.markdown_to_html(
+            "# 題名\n\n個人 $i$ の幸福を $H_i(t)$ とする。\n\n$$\n\\max \\sum_{i=1}^{N} H_i(t)\n$$\n\n\\frac{dH_i}{dt} \\propto \\tan\\theta_i\n",
+            None,
+        )
+        self.assertIn("個人 i の幸福を Hᵢ(t) とする。", body)
+        self.assertIn("max Σ（i=1〜ᴺ） Hᵢ(t)", body)
+        self.assertIn("dHᵢ / dt ∝ tanθᵢ", body)
+        self.assertNotIn("$$", body)
+        self.assertNotIn(r"\frac", body)
+
     def test_rejects_missing_todo_image(self):
         with tempfile.TemporaryDirectory() as temporary:
             article = Path(temporary) / "article.md"
