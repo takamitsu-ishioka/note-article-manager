@@ -9,6 +9,8 @@
 画風：ポップ、カラフル、彩度高め、描線シンプル、陰影なし
 
 ## 以下はメモ。無視してください。
+[中央計算幻想](https://note.com/kisaburo_y/n/n6de9c4aa134f)
+[束ねるな💢](https://note.com/kisaburo_y/n/nb363480df169)
 ---
 ```
 タイトル：記事のタイトル
