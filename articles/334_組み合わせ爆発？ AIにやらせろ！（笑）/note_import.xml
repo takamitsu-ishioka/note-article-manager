@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>note-article-manager</title>
+  <link>https://note.com/</link>
+  <description>note import package</description>
+  <language>ja</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:base_site_url>https://note.com/</wp:base_site_url>
+  <wp:base_blog_url>https://note.com/</wp:base_blog_url>
+  <item>
+    <title>組み合わせ爆発？ AIにやらせろ！（笑）</title>
+    <dc:creator><![CDATA[note-article-manager]]></dc:creator>
+    <content:encoded><![CDATA[<h2>UNIX哲学とAI Agentが出会った日。小さなセンサーの取り付け問題から見えた、人間とAIの新しい役割分担</h2>
+        <p>
+            <strong>User:</strong> y.kisaburo@gmail.com<br>
+        </p>
+        <h2>登場人物</h2>
+        <p>
+            <strong>私</strong>：寝室に小型センサーを取り付けたい人。要求を疑い、複雑な仕組みを嫌う。<br>
+            <strong>Claude Code</strong>：最初に相談されたAI。真面目に構造を検討し、設置方法を提案する。<br>
+            <strong>ChatGPT</strong>：次に相談されたAI。市販部品を探すが、なかなか決定打が出ない。<br>
+            <strong>ChatGPT Work</strong>：最後に登場するAI Agent。面倒な探索作業を引き受ける。<br>
+            ※この脚本は、Claude CodeおよびChatGPTとの実際の長い対話をもとに、発言を要約・再構成したものである。逐語録ではない。<br>
+        </p>
+        <hr>
+        <h2>第一幕　たかがセンサー、されどセンサー</h2>
+        <h2>私：</h2>
+        <p>
+            寝室に小型センサーを取り付けたい。<br>
+            センサーはタバコの箱くらいの大きさで、重さは数十グラム。<br>
+            布団で寝ている人間を上から測定するので、高さは約2メートル。<br>
+            天井や壁に穴は開けたくない。<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            それなら、突っ張り式の柱を2本立て、上部を横木で接続する門型フレームはいかがでしょう。<br>
+            ディアウォールやラブリコなどが使えます。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            大げさすぎる！（笑）<br>
+            数十グラムのセンサーを取り付けるために、なぜ建築工事みたいなことをせねばならんのだ💢<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            では、部屋を横断する突っ張り棒を利用する方法はどうでしょう。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            それだ！<br>
+            部屋の幅は2300〜2400mm程度。突っ張り棒なら市販品がある。<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            安定性を考えると、突っ張り棒を2本並行に設置し、ベルトでセンサーを保持する方法が考えられます。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            棒は1本でいいだろう💢（笑）<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            なるほど。1本の棒にセンサーを直接固定する構造ですね。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            そう。<br>
+            ちなみにセンサーの高さは、設置後に実測してソフトウェアへ入力すればいい。<br>
+            最初から厳密に高さを決める必要はない。<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            それなら設置構造をさらに単純化できます。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            ほら、要求を疑うと仕事が消える！（笑）<br>
+        </p>
+        <hr>
+        <h2>第二幕　指輪と宝石</h2>
+        <h2>Claude Code：</h2>
+        <p>
+            突っ張り棒1本に、センサー保持具を取り付ける構成を考えましょう。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            イメージとしては指輪だな。<br>
+            突っ張り棒が指。<br>
+            固定具が指輪。<br>
+            センサーが宝石。<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            なるほど。指輪の石座に相当する部分でセンサーを保持するわけですね。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            そうそう。<br>
+            余計な腕も関節もいらない。<br>
+            棒に密着させれば揺れにくい。<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            すると、棒を掴む部分とセンサーを保持する部分を一体化した固定具が理想です。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            磁石はどうだ？<br>
+            棒側のクランプに磁石、センサー側の保持具に鉄板。<br>
+            パチンとくっつける。<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            着脱が容易になりますね。ただし、磁石の保持力や回転に対する安定性を確認する必要があります。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            問題は、ちょうどいい既製品があるかどうかだな。<br>
+        </p>
+        <h2>Claude Code：</h2>
+        <p>
+            撮影機材用のクランプやマウントが候補になりそうです。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            なるほど。ではChatGPTにも探させよう。<br>
+        </p>
+        <hr>
+        <h2>第三幕　既製品との果てしなき戦い</h2>
+        <h2>私：</h2>
+        <p>
+            突っ張り棒に小型の直方体センサーを固定したい。<br>
+            市販品だけで実現したい。加工なし。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            撮影機材用のスーパークランプやスマートフォンホルダーが使えそうです。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            スマホホルダーか。なるほど。<br>
+            ただしセンサーはスマホより小さいぞ。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            保持可能な幅と厚さを確認する必要がありますね。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            それを探してくれと言ってるんだ！（笑）<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            では、両端にクランプが付いたダブルクランプはいかがでしょう。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            おお、これだ！<br>
+            ……いや、待て。<br>
+            両端とも丸棒を掴む形になっているぞ。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            確かに、両端ともパイプ用の形状ですね。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            <strong>センサー掴めん💢</strong><br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            必要なのは異種クランプですね。<br>
+            一方は丸棒用。<br>
+            もう一方は直方体用。<br>
+            両者を短い剛体で接続する構造です。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            そう。それ！<br>
+            しかし、なかなか見つからん。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            丸棒を掴む機構は存在します。<br>
+            直方体を掴む機構も存在します。<br>
+            両者を接続する部品も存在します。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            なのに欲しい組み合わせだけがない！<br>
+            <strong>既製品、帯に短し襷に長し💢</strong><br>
+        </p>
+        <hr>
+        <h2>第四幕　ここで登場するUNIX哲学</h2>
+        <h2>私：</h2>
+        <p>
+            おお！<br>
+            ここで登場するUNIX哲学。<br>
+            <strong>巨大な製品を作るな。小さな部品をつなげ！</strong><br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            まさにそれです！<br>
+            必要な機能を分割しましょう。<br>
+        </p>
+        <ol>
+        <li>丸棒を掴む。</li>
+        <li>直方体を掴む。</li>
+        <li>両者を接続する。</li>
+        </ol>
+        <p>
+            それぞれ独立した部品にして、共通インターフェースで接続する。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            そうだ！<br>
+            完成品を探す必要はない。<br>
+            それぞれの機能を持つ既製品を組み合わせればいい。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            撮影機材には1/4-20 UNCというネジ規格があります。<br>
+            これを共通インターフェースとして利用できそうです。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            素晴らしい。<br>
+            これで解決だな。<br>
+            ……。<br>
+            いや、待てよ。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            どうしました？<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            問題：組み合わせ爆発。<br>
+            翻訳：<strong>なんか面倒くさい（笑）</strong><br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            あああ！（笑）<br>
+            仮に丸棒クランプが10種類、センサー保持具が10種類、接続部品が10種類あれば、組み合わせは1000通り！<br>
+            しかもネジの雌雄、保持幅、剛性、価格を確認する必要があります。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            UNIX哲学で部品を分割した結果、部品選定という新しい仕事が発生した！（爆笑）<br>
+        </p>
+        <hr>
+        <h2>第五幕　そこで登場するAI</h2>
+        <h2>私：</h2>
+        <p>
+            そこで登場するのがAI。<br>
+            ワイ「明日までにいい感じの組み合わせ探しておいて」<br>
+            ……。<br>
+            翌朝。<br>
+            AI Agent「いい感じのTop 3は以下の通りです」<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            出た！！！（爆笑）<br>
+            人間が1000通りの組み合わせを調べる必要はありません。<br>
+            AI Agentに探索と比較を任せればいい。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            そうだ。<br>
+            人間がやるべきなのは目的を決めることと、結果を選ぶこと。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            すると、メーカーが何でも一体化した完成品を作る必要性も、場合によっては小さくなりますね。<br>
+            部品を標準化しておけば、AIが適切な組み合わせを探してくれる。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            そう！<br>
+            小さな部品を作れ。<br>
+            共通インターフェースを用意しろ。<br>
+            組み合わせはAIに探させろ！<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            ソフトウェアのUNIX哲学が、AIによって物理的な製品の組み合わせにも広がる可能性があります。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            数十グラムのセンサーを取り付けたいだけなのに、製造業の未来の話になってしまった！（笑）<br>
+        </p>
+        <hr>
+        <h2>第六幕　プロンプトが完成した</h2>
+        <h2>私：</h2>
+        <p>
+            では、AI Agentに渡す要求を整理しよう。<br>
+        </p>
+        <ol>
+        <li>センサーを保持するクランプ。</li>
+        <li>突っ張り棒を保持するクランプ。</li>
+        <li>両者を繋ぐ何か。</li>
+        </ol>
+        <p>
+            あれ？<br>
+            3は漠然としすぎなのでは？<br>
+            撮影機材の規格があるの？<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            あります！<br>
+            代表的なのは1/4-20 UNCというカメラネジ規格です。<br>
+            これを利用すれば、異なるメーカーの部品でも接続できる可能性があります。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            よし。<br>
+            3番を具体化しよう。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            では、以下の条件で探索させましょう。<br>
+        </p>
+        <h3>AI Agentへの指示</h3>
+        <p>
+            以下の3部品を組み合わせ、寝室の突っ張り棒に小型センサーを固定する方法を探してください。<br>
+            <strong>1. センサー保持クランプ</strong><br>
+        </p>
+        <ul>
+        <li>小型の直方体を傷つけずに保持できる</li>
+        <li>1/4-20 UNCの接続部を持つ</li>
+        </ul>
+        <p>
+            <strong>2. 突っ張り棒保持クランプ</strong><br>
+        </p>
+        <ul>
+        <li>丸棒を確実に保持できる</li>
+        <li>1/4-20 UNCの接続部を持つ</li>
+        </ul>
+        <p>
+            <strong>3. 接続部品</strong><br>
+        </p>
+        <ul>
+        <li>原則として1/4-20 UNC規格</li>
+        <li>可能な限り短く、剛性が高い</li>
+        <li>オス・メスの組み合わせが適合すること</li>
+        </ul>
+        <p>
+            <strong>条件</strong><br>
+        </p>
+        <ul>
+        <li>市販品のみ、加工なし</li>
+        <li>短い腕は許容</li>
+        <li>測定中に揺れたり回転したりしない</li>
+        <li>安価で簡単に設置できる</li>
+        <li>部品の寸法、接続規格、価格、購入先を検証する</li>
+        </ul>
+        <p>
+            適合する組み合わせを3案、総額の安い順に提示してください。適合未確認の部品は明示してください。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            よし！<br>
+            これをAI Agentに渡そう。<br>
+        </p>
+        <hr>
+        <h2>第七幕　AI Agent、出動！</h2>
+        <h2>私：</h2>
+        <p>
+            ところで、このタスクに最も適したAI Agentは何だ？<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            ChatGPT Workが第一候補です。<br>
+            複数のWebサイトを調査し、部品の適合性や価格を比較する仕事に向いています。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            Workモード？<br>
+            どこにある？<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            ChatGPTのWeb版で選択できます。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            見当たらん💢<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            画面を見せてください。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            （スクリーンショットを提示）<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            あった！！！（爆笑）<br>
+            すでにWorkモードが動いています！<br>
+        </p>
+        <p>
+        <blockquote>
+        筆者注：私が Work を発見して指示した。
+        </blockquote>
+        </p>
+        <p>
+            17サイトを検索中です！<br>
+        </p>
+        <hr>
+        <h2>最終幕　人間は何をするのか</h2>
+        <p>
+            <strong>ナレーション：</strong><br>
+            ここまで、Claude CodeとChatGPTとの長い対話があった。<br>
+            門型フレームから始まり、突っ張り棒2本、突っ張り棒1本、指輪、磁石、スマートフォンホルダー、ダブルクランプ……。<br>
+            試行錯誤の末に到達したのは、驚くほど単純な構造だった。<br>
+            「棒を掴む」「箱を掴む」「両者を接続する」。<br>
+            しかし、その単純な構造を実現するための部品探索は、決して単純ではなかった。<br>
+            そこで仕事をAI Agentに委譲した。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            つまり、人間とAIが長々と議論していたのは、AI Agentに何をやらせるかを決めるためだったわけだ。<br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            そうなりますね。<br>
+            人間が目的を示す。<br>
+            対話型AIと一緒に問題を分解する。<br>
+            AI Agentが具体的な解決策を探索する。<br>
+            最後に人間が検収し、選択する。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            そして、重要なのは……<br>
+            <strong>「AIに仕事を任せるための仕事」を、人間が全部やる必要もない！</strong><br>
+        </p>
+        <h2>ChatGPT：</h2>
+        <p>
+            そこまで含めてAIとの共同作業ですね。<br>
+        </p>
+        <h2>私：</h2>
+        <p>
+            しかし、まだ肝心のセンサーは取り付けられていない！（爆笑）
+        </p>
+        <p>
+            <strong>ナレーション：</strong><br>
+            果たしてAI Agentは、実際に購入でき、寸法が適合し、センサーを確実に保持できる組み合わせを発見するのか。<br>
+            以下、ChatGPT Workによる探索結果へ続く。<br>
+            <strong>――第一部・完――</strong><br>
+        </p>
+        <h2>第二部</h2>
+        <h2>私：</h2>
+        <p>
+            以下の3部品を組み合わせ、寝室の突っ張り棒に小型センサーを固定する方法を探してください。<br>
+        </p>
+        <ol>
+        <li><strong>センサー(マルボロメンソールロングの箱とほぼ同じ高さと幅、厚みは1.5倍、重さは数十グラム)保持クランプ</strong></li>
+        </ol>
+        <p>
+               - 小型の直方体を傷つけずに保持できる<br>
+               - 1/4-20 UNCの接続部を持つ<br>
+        </p>
+        <ol>
+        <li><strong>突っ張り棒保持クランプ(2.5m級の突っ張り棒)</strong></li>
+        </ol>
+        <p>
+               - 丸棒を確実に保持できる<br>
+               - 1/4-20 UNCの接続部を持つ<br>
+        </p>
+        <ol>
+        <li><strong>接続部品</strong></li>
+        </ol>
+        <p>
+               - 原則として1/4-20 UNC規格<br>
+               - 可能な限り短く、剛性が高い<br>
+               - オス・メスの組み合わせが適合すること<br>
+            条件：<br>
+        </p>
+        <ul>
+        <li>市販品のみ、加工なし</li>
+        <li>短い腕は許容</li>
+        <li>測定中に揺れたり回転したりしない</li>
+        <li>安価で簡単に設置できる</li>
+        <li>部品の寸法、接続規格、価格、購入先を検証する</li>
+        </ul>
+        <p>
+            適合する組み合わせを3案、総額の安い順に提示してください。適合未確認の部品は明示してください。<br>
+        </p>
+        <h2>ChatGPT Work：</h2>
+        <p>
+            クランプの開口寸法とねじの雌雄を照合し、国内で買える組み合わせを価格順に整理します。<br>
+            <strong>棒の取付位置が直径15〜40 mmで、センサーの厚みが40 mm以下なら、第一候補は SmallRig 735を2個、両オスねじで直結する案です。</strong> ヨドバシの掲載価格で合計 <strong>3,180円</strong>。接続部に可動関節がなく、3案の中で最も短く固定できます。 (<a href="https://www.yodobashi.com/product/100000001007690499/" target="_blank">yodobashi.com</a>, <a href="https://www.bhphotovideo.com/c/product/1422142-REG/smallrig_735_super_clamp_with_1_4.html" target="_blank">bhphotovideo.com</a>, <a href="https://www.yodobashi.com/product/100000001003665246/" target="_blank">yodobashi.com</a>, <a href="https://www.yodobashi.com/product/100000001003665246/" target="_blank">yodobashi.com</a>)<br>
+            以下は税込の商品代順です。送料とポイントは含めていません。2.5 mは棒の長さなので、適合判定には<strong>実際に挟む位置の外径</strong>を使います。<br>
+            <strong>案1：3,180円。関節のない最短の構成</strong><br>
+        </p>
+        <p><img src="https://takamitsu-ishioka.github.io/note-article-manager/note-assets/334/table1.png" alt="table1.png"></p>
+        <p>
+            <strong>案2：3,360円。向きを調整できる構成</strong><br>
+        </p>
+        <p><img src="https://takamitsu-ishioka.github.io/note-article-manager/note-assets/334/table2.png" alt="table2.png"></p>
+        <p>
+            <strong>案3：4,340円。棒の外径が40 mmを超える場合</strong><br>
+        </p>
+        <p><img src="https://takamitsu-ishioka.github.io/note-article-manager/note-assets/334/table3.png" alt="table3.png"></p>
+        <p>
+            案3は、ソフマップの掲載送料550円を加えると<strong>4,890円</strong>です。3案ともねじの組み合わせは<strong>メス―両オス―メス</strong>です。<br>
+            <strong>センサー側は3案とも、箱の「厚み」を挟みます。</strong> 735は平面にも使え、爪に滑り止め・傷防止用のゴムが付いています。開口は国内販売店の仕様に合わせて <strong>40 mmまで</strong>で判定しました。センサーの正確な厚み、爪が筐体に平らに当たる位置、ボタンや端子との干渉は<strong>現物未確認</strong>です。 (<a href="https://www.biccamera.com/bc/item/11095240/" target="_blank">biccamera.com</a>, <a href="https://www.bhphotovideo.com/c/product/1422142-REG/smallrig_735_super_clamp_with_1_4.html" target="_blank">bhphotovideo.com</a>, <a href="https://www.voosestore.com/en/product/smallrig-super-clamp-735-4" target="_blank">voosestore.com</a>)<br>
+            設置時は、棒の継ぎ目を避けて外径が一定の位置に固定します。直結の案1・3では、ねじが穴の底に先に当たってクランプが回る状態だと、ねじ規格が合っていても固定できません。締めたあとにセンサーを軽くひねり、<strong>ねじの接合部・棒側クランプ・突っ張り棒そのもの</strong>のどこにも回転やがたつきがないことを確認してください。<br>
+        </p>
+        <hr>
+        <p>
+            <strong>Sources:</strong><br>
+        </p>
+        <ul>
+        <li><a href="https://www.yodobashi.com/product/100000001007690499/" target="_blank">ヨドバシ.com - SmallRig スモールリグ SmallRig735 スーパークランプ SR735 通販〖全品無料配達〗</a></li>
+        <li><a href="https://www.bhphotovideo.com/c/product/1422142-REG/smallrig_735_super_clamp_with_1_4.html" target="_blank">SmallRig 735 Super Clamp with 1/4"-20 and 3/8"-16 Threads 735</a></li>
+        <li><a href="https://www.ginichi.com/shop/g/g88598/" target="_blank">SmallRig(スモールリグ) ボールヘッドマジックアーム付きスーパークランプ 2164: 機材サポート・リグ・システム - 銀一オンラインショップ</a></li>
+        <li><a href="https://www.smallrig.com/eu/smallrig-universal-magic-arm-with-small-ball-head-2163.html" target="_blank">Universal Magic Arm with Small Ball Head</a></li>
+        <li>[R094 ボールヘッド付き多機能カニ形クランプ｜の通販はソフマップ[sofmap]](https://www.sofmap.com/product_detail.aspx?sku=24378662)</li>
+        <li><a href="https://www.ulanzi.jp/collections/quick-release/products/ulanzi-r094-multi-functional-super-clamp" target="_blank">Ulanzi R094 多機能スーパークランプ 2638</a></li>
+        <li><a href="https://www.biccamera.com/bc/item/11095240/" target="_blank">SR735 SmallRig｜スモールリグ 通販 | ビックカメラ.com〖送料無料 ※一部対象外あり〗</a></li>
+        <li><a href="https://www.voosestore.com/en/product/smallrig-super-clamp-735-4" target="_blank">SmallRig Super Clamp 735</a></li>
+        </ul>
+        <hr>
+        <p>
+            Powered by <a href="https://www.chatgptexporter.com" target="_blank">ChatGPT Exporter</a><br>
+            #AIエージェント #UNIX哲学 #ものづくり #問題解決 #役割分担<br>
+        </p>]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>334</wp:post_id>
+    <wp:post_date>2026-11-10 18:14:36</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 18:14:36</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>article-334</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type>post</wp:post_type>
+    <wp:post_password></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+  </item>
+</channel>
+</rss>

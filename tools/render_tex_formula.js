@@ -27,4 +27,9 @@ if (!match) {
 }
 // ImageMagick does not resolve SVG currentColor consistently. Embed a stable
 // foreground color and omit MathJax's HTML-only container wrapper.
-fs.writeFileSync(process.argv[3], match[0].replaceAll("currentColor", "#111827"));
+fs.writeFileSync(
+  process.argv[3],
+  match[0]
+    .replaceAll("currentColor", "#111827")
+    .replaceAll('font-family="serif"', 'font-family="Noto Sans CJK JP"')
+);

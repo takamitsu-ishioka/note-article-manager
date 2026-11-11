@@ -206,6 +206,17 @@ WXR XMLファイルを作る。以下の順で進めること。
    このHTMLを再生成せず、次のWXR変換へ渡す。既存の`article.html`は上書きしない。作り直しが必要な場合のみ
    `--force`を明示する。
 
+   `<pre><code>`内のテキストにはHTMLソース整形用の字下げを加えない。最初の本文行は
+   `<pre><code>`の直後に、最後の本文行は`</code></pre>`の直前に置き、各行の先頭位置を揃える。
+   例：
+
+   ```html
+   <pre><code>Howを管理する場合
+   管理者 → 指示 → 担当者
+   管理者 ← 質問 ← 担当者
+   …</code></pre>
+   ```
+
    ```bash
    python3 tools/export_note_import.py '<記事ディレクトリ>' --format html \
      --output '<記事ディレクトリ>/article.html'
